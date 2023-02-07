@@ -1,0 +1,9 @@
+Da https://icons8.com/icons/new/
+
+Icone almeno 64x64 se possibile
+Aggiungere padding 30% se non ne hanno
+
+Colore interno: #CCCCCC
+Colore bordo: #333333
+
+Dimensione delle icone nell'interfaccia 48x48

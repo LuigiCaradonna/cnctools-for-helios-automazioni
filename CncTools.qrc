@@ -1,0 +1,9 @@
+<RCC>
+  <qresource prefix="CncTools">
+    <file>assets/addfile64.png</file>
+    <file>assets/play100.png</file>
+    <file>assets/move64.png</file>
+    <file>assets/delete100.png</file>
+    <file>assets/queue64.png</file>
+  </qresource>
+</RCC>
