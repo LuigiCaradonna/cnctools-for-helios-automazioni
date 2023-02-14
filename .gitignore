@@ -100,9 +100,9 @@ $RECYCLE.BIN/
 ##
 ## Get latest from https://github.com/github/gitignore/blob/main/VisualStudio.gitignore
 
-*.sln
-*.vcxproj
-*.vcxproj.filters
+# *.sln
+# *.vcxproj
+# *.vcxproj.filters
 
 # User-specific files
 *.rsuser
