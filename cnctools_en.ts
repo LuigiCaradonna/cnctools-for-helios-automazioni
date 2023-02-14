@@ -4,53 +4,53 @@
 <context>
     <name>CncTools</name>
     <message>
-        <location filename="CncTools.cpp" line="435"/>
+        <location filename="CncTools.cpp" line="436"/>
         <source>open_file</source>
         <translation>Open Files</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="473"/>
+        <location filename="CncTools.cpp" line="485"/>
         <source>wrong_extension</source>
         <translation>File estension is not correct</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="487"/>
+        <location filename="CncTools.cpp" line="499"/>
         <source>sel_valid_iso</source>
         <translation>Select valid ISO files</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="509"/>
+        <location filename="CncTools.cpp" line="521"/>
         <source>prov_valid_width</source>
         <translation>Provide a valid width (integer number equals or greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="535"/>
+        <location filename="CncTools.cpp" line="547"/>
         <source>prov_valid_height</source>
         <translation>Provide a valid height (integer number equals or greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="561"/>
+        <location filename="CncTools.cpp" line="573"/>
         <source>prov_valid_speed</source>
         <translation>Provide a valid speed (integer greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="576"/>
-        <location filename="CncTools.cpp" line="585"/>
+        <location filename="CncTools.cpp" line="588"/>
+        <location filename="CncTools.cpp" line="597"/>
         <source>set_dims_none</source>
         <translation>Set both the dimensions or none</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="865"/>
+        <location filename="CncTools.cpp" line="877"/>
         <source>no</source>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="879"/>
+        <location filename="CncTools.cpp" line="891"/>
         <source>proc_coords</source>
         <translation>Processing coordinates</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="880"/>
+        <location filename="CncTools.cpp" line="892"/>
         <source>cancel</source>
         <translation>Cancel</translation>
     </message>
@@ -63,244 +63,249 @@
         <translation>Cnc Tools</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="61"/>
+        <location filename="CncTools.ui" line="93"/>
         <source>tt_btn_translate</source>
         <translation>Translate coordinates</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="93"/>
+        <location filename="CncTools.ui" line="125"/>
         <source>tt_btn_enqueue</source>
         <translation>Enqueue jobs</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="219"/>
+        <location filename="CncTools.ui" line="251"/>
         <source>btn_load_files</source>
         <oldsource>Load Files</oldsource>
         <translation>Load Files</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="291"/>
+        <location filename="CncTools.ui" line="323"/>
         <source>btn_reset</source>
         <oldsource>Reset</oldsource>
         <translation>Reset</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="264"/>
+        <location filename="CncTools.ui" line="296"/>
         <source>btn_process</source>
         <oldsource>Process</oldsource>
         <translation>Process</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="347"/>
+        <location filename="CncTools.ui" line="379"/>
         <source>lbl_slab_size</source>
         <oldsource>Slab size</oldsource>
         <translation>Slab size</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="409"/>
+        <location filename="CncTools.ui" line="441"/>
         <source>lbl_w_mm</source>
         <oldsource>W (mm)</oldsource>
         <translation>W (mm)</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="439"/>
+        <location filename="CncTools.ui" line="471"/>
         <source>lbl_dst_pos</source>
         <oldsource>DST Pos.</oldsource>
         <translation>DST Pos</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="436"/>
+        <location filename="CncTools.ui" line="468"/>
         <source>tt_dst_pos</source>
         <translation>Repositioning distance in mm</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="496"/>
+        <location filename="CncTools.ui" line="61"/>
+        <source>tt_btn_load_iso</source>
+        <translation>Load PGR file</translation>
+    </message>
+    <message>
+        <location filename="CncTools.ui" line="528"/>
         <source>lbl_y_max</source>
         <translation>Y Max</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="526"/>
+        <location filename="CncTools.ui" line="558"/>
         <source>lbl_x_max</source>
         <translation>X Max</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="553"/>
+        <location filename="CncTools.ui" line="585"/>
         <source>lbl_offset</source>
         <translation>Offset</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="580"/>
+        <location filename="CncTools.ui" line="612"/>
         <source>tt_dst_eng</source>
         <translation>Engraving distance in mm</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="583"/>
+        <location filename="CncTools.ui" line="615"/>
         <source>lbl_dst_eng</source>
         <oldsource>DST Eng.</oldsource>
         <translation>DST Eng</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="613"/>
+        <location filename="CncTools.ui" line="645"/>
         <source>lbl_x_min</source>
         <translation>X Min</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="730"/>
+        <location filename="CncTools.ui" line="762"/>
         <source>lbl_z_max</source>
         <translation>Z Max</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="787"/>
+        <location filename="CncTools.ui" line="819"/>
         <source>lbl_h_mm</source>
         <oldsource>H (mm)</oldsource>
         <translation>H (mm)</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="817"/>
+        <location filename="CncTools.ui" line="849"/>
         <source>lbl_mm_min</source>
         <translation>mm/min</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="874"/>
+        <location filename="CncTools.ui" line="906"/>
         <source>lbl_y_min</source>
         <translation>Y Min</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1021"/>
+        <location filename="CncTools.ui" line="1053"/>
         <source>Livello di zoom</source>
         <translation>Zoom level</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1024"/>
+        <location filename="CncTools.ui" line="1056"/>
         <source>lbl_zoom</source>
         <oldsource>Zoom</oldsource>
         <translation>Zoom</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1083"/>
+        <location filename="CncTools.ui" line="1115"/>
         <source>lbl_working_area</source>
         <oldsource>Working area</oldsource>
         <translation>Working Area</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1140"/>
+        <location filename="CncTools.ui" line="1172"/>
         <source>lbl_est_time</source>
         <oldsource>Estimated time</oldsource>
         <translation>Estimated time</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1197"/>
+        <location filename="CncTools.ui" line="1229"/>
         <source>lbl_mouse_pos</source>
         <oldsource>Mouse position</oldsource>
         <translation>Mouse position</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1356"/>
+        <location filename="CncTools.ui" line="1388"/>
         <source>tt_chk_regen</source>
         <translation>Regenerate the drawing upon window resize</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1383"/>
+        <location filename="CncTools.ui" line="1415"/>
         <source>tt_chk_colors</source>
         <translation>Draw the lines using colors or grayscale</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1410"/>
+        <location filename="CncTools.ui" line="1442"/>
         <source>tt_chk_sculpture</source>
         <translation>Must be selected if the file represent a sculpture</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1437"/>
+        <location filename="CncTools.ui" line="1469"/>
         <source>tt_chk_fit</source>
         <translation>Adapt the drawing size to the visible area</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1464"/>
+        <location filename="CncTools.ui" line="1496"/>
         <source>tt_chk_gradient</source>
         <translation>Use a gradient effect to show the engraving depth</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1491"/>
+        <location filename="CncTools.ui" line="1523"/>
         <source>tt_chk_zmax</source>
         <translation>Highlights the points at max depth</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1527"/>
+        <location filename="CncTools.ui" line="1559"/>
         <source>btn_close</source>
         <translation>Close</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1550"/>
+        <location filename="CncTools.ui" line="1582"/>
         <source>menu_lang</source>
         <translation>Language</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1555"/>
+        <location filename="CncTools.ui" line="1587"/>
         <source>menu_tools</source>
         <translation>Tools</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1565"/>
+        <location filename="CncTools.ui" line="1597"/>
         <source>menu_trans_coords</source>
         <translation>Translate coordinates</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1568"/>
+        <location filename="CncTools.ui" line="1600"/>
         <source>icon_trans_coords</source>
         <translation>Translate coordinates</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1571"/>
+        <location filename="CncTools.ui" line="1603"/>
         <source>tt_trans_coords</source>
         <translation>Translate coordinates</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1576"/>
+        <location filename="CncTools.ui" line="1608"/>
         <source>menu_enq_pgr</source>
         <translation>Enqueue jobs</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1579"/>
+        <location filename="CncTools.ui" line="1611"/>
         <source>icon_enq_pgr</source>
         <translation>Enqueue PGR files</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1582"/>
+        <location filename="CncTools.ui" line="1614"/>
         <source>tt_enq_pgr</source>
         <translation>Enqueue PGR files</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1440"/>
+        <location filename="CncTools.ui" line="1472"/>
         <source>lbl_fit</source>
         <oldsource>Fit</oldsource>
         <translation>Fit</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1359"/>
+        <location filename="CncTools.ui" line="1391"/>
         <source>lbl_regen</source>
         <oldsource>Regenerate</oldsource>
         <translation>Regenerate</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1386"/>
+        <location filename="CncTools.ui" line="1418"/>
         <source>lbl_colors</source>
         <oldsource>Colors</oldsource>
         <translation>Colors</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1413"/>
+        <location filename="CncTools.ui" line="1445"/>
         <source>lbl_sculp</source>
         <oldsource>Sculpture</oldsource>
         <translation>Sculpture</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1467"/>
+        <location filename="CncTools.ui" line="1499"/>
         <source>lbl_gradient</source>
         <oldsource>Gradient</oldsource>
         <translation>Gradient</translation>
     </message>
     <message>
-        <location filename="CncTools.ui" line="1494"/>
+        <location filename="CncTools.ui" line="1526"/>
         <source>lbl_zmax</source>
         <oldsource>Z Max</oldsource>
         <translation>Z Max</translation>

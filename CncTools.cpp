@@ -52,6 +52,7 @@ CncTools::CncTools(QWidget* parent)
     this->connect(this->ui.actionEnqueuePGR, SIGNAL(triggered()), this, SLOT(slotToolsEnqueuePgr()));
 
     // Bind the buttons to the corresponding method to fire
+    this->connect(this->ui.btn_load_iso, &QPushButton::released, this, &CncTools::browseFile);
     this->connect(this->ui.btn_translate_coords, &QPushButton::released, this, &CncTools::slotToolsTranslateCoords);
     this->connect(this->ui.btn_enqueue_pgr, &QPushButton::released, this, &CncTools::slotToolsEnqueuePgr);
     this->connect(this->ui.btn_draw, &QPushButton::released, this, &CncTools::draw);

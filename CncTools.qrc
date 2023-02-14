@@ -5,5 +5,6 @@
     <file>assets/move64.png</file>
     <file>assets/delete100.png</file>
     <file>assets/queue64.png</file>
+    <file>assets/draw100.png</file>
   </qresource>
 </RCC>
