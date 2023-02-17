@@ -8,7 +8,8 @@ This software is a set of utilities to be used with the proprietary GCode files 
 
 ## Features
 
-**PGR path visualization**
+### PGR path visualization  
+
 - Import multiple files at once
 - Possibility to specify the working area size
 - Option to decide whether or not the path has to fit the visible area
