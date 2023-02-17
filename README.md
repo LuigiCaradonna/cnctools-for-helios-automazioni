@@ -7,6 +7,7 @@ This software is a set of utilities to be used with the proprietary GCode files 
 > I am computer engineer employed as a technical designer and a CNC programmer at [Centro Marmi D'Arcangeli srl](https://www.cmdarcangeli.com).
 
 ## Features
+
 **PGR path visualization**
 - Import multiple files at once
 - Possibility to specify the working area size
@@ -17,23 +18,27 @@ This software is a set of utilities to be used with the proprietary GCode files 
 - Option to highlight the milling deepest points
 - Gradient effect applied to the segments to show the difference in depth of the milling
 - Calculation of the distance traveled both for millings and repositionings
-- Estimate of the working time given the speed of the tool (not yet reliable)
+- Estimate of the working time given the speed of the tool (not yet reliable)\*
 
-**PGR queuing**
+### PGR queuing
+
 - Import multiple files at once
 - Drag&Drop to reorder the loaded files
 
-**PGR translation**
+### PGR translation
+
 - Translation along X and Y axes
 
-About the working time, the reason why it is not currently reliable, is that the machine doesn't really keep the speed constant while working and the vertical movement are not performed at the same speed as the horizontal ones, it could also vary due to the hardness of the material, the complexity of the job and other reasons.
-Where the job is at a constant depth the time results to be almost correct. 
+##### \* About the working time, the reason why it is not currently reliable, is that the machine doesn't really keep the speed constant while working and the vertical movement are not performed at the same speed as the horizontal ones, it could also vary due to the hardness of the material, the complexity of the job and other reasons. Where the job is at a constant depth the time results to be almost correct. 
 
 ## Tech
+
 The whole software is written in `C++`, using `Qt6` to build the user interface.
 
 ## How to use
-**PGR path visualization and main window**  
+
+### PGR path visualization and main window
+
 ![Graphic User Interface](/ui.png)  
 The basic usage only requires to click on the `Load files` button (24) and to select one or more PGR files, then to click on the `Process` button (25).  
 However you have the possibility to set several options to have different behaviours.  
@@ -75,8 +80,11 @@ The software only shows segments with positive coordinates, for this reason, whe
 **33 -** Language menu to change the interface language  
 **34 -** Tools menu, contains the links to open the various tools  
 
-**Queuing tool**  
+### Queuing tool
+
 ![Queuing tool](/queuing-tool.png)  
+With this tool it is possible to join together multiple PRG files, the tool also removes the commands which determine the pause and the repositionig between two jobs.  
+  
 Select the PGR files to join by clicking the button `(1)`, multiple files selection is possible. If it is necessary, the files can be reordered dragging and dropping them.  
 Once the files are in the wanted sequence, click the `Start` button (6).  
 The tool will ask where to save the generated file.  
@@ -93,8 +101,11 @@ The tool will only consider the first file in the list to decide the speed. That
 **7 -** Button to reset the tool  
 **8 -** Button to close the tool  
 
-**Translation tool**  
+### Translation tool
+
 ![Queuing tool](/translate-tool.png)  
+This tool is useful to translate the coordinates of a path already generated, without the need to edit the drawing inside the CAD software and to recalculate the path.  
+  
 Select the source file, set the name and the location for the new file.  
 Set the offset in millimeters along the X axis inside the proper field (3).  
 Set the offset in millimeters along the Y axis inside the proper field (4).  
@@ -110,10 +121,12 @@ Click the `Translate` button (6).
 **8 -** Button to close the tool  
 
 ## How to compile
+
 The project has been developed using Visual Studio 2022 CE.
 To compile the software, `msvc2019+`, `Qt 6.0+` are required.
 
 ## Installation
+
 Inside the folder `dist` the latest compiled version of the software for Windows is available in a zip format.  
 There is no need to install the software.  
 Unpack the zip package, inside the folder `Isoviewer`, run the file `Isoviewer.exe`.  
