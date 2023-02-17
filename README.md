@@ -94,7 +94,7 @@ The tool will only consider the first file in the list to decide the speed. That
 **8 -** Button to close the tool  
 
 **Translation tool**  
-![Queuing tool](/queuing-tool.png)  
+![Queuing tool](/translate-tool.png)  
 Select the source file, set the name and the location for the new file.  
 Set the offset in millimeters along the X axis inside the proper field (3).  
 Set the offset in millimeters along the Y axis inside the proper field (4).  
