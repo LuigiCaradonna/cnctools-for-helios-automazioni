@@ -37,6 +37,7 @@ CncTools::CncTools(QWidget* parent)
     this->scene = new MyGraphicScene();
     // Intercepts the signal emitted and connects it to the mousePosition() method
     this->connect(this->scene, &MyGraphicScene::signalMousePos, this, &CncTools::mousePosition);
+    this->connect(this->scene, &MyGraphicScene::signalKeyPressed, this, &CncTools::keyPressed);
 
     // Assign the scene to the canvas
     this->ui.canvas->setScene(scene);
@@ -67,7 +68,7 @@ CncTools::CncTools(QWidget* parent)
     this->connect(this->ui.chk_gradient, &QCheckBox::stateChanged, this, &CncTools::toggleGradient);
     this->connect(this->ui.chk_autoresize, &QCheckBox::stateChanged, this, &CncTools::toggleAutoresize);
 
-    // Input fieldsand labels styling
+    // Input fields and labels styling
     this->ui.lbl_x_min_value->setStyleSheet("background-color: #DDDDDD; border: 1px solid #BBBBBB;");
     this->ui.lbl_x_max_value->setStyleSheet("background-color: #DDDDDD; border: 1px solid #BBBBBB;");
     this->ui.lbl_y_min_value->setStyleSheet("background-color: #DDDDDD; border: 1px solid #BBBBBB;");
@@ -345,6 +346,18 @@ void CncTools::mousePosition(const QPointF& pos)
     this->ui.lbl_mouse_pos_x->setText(text_number.asprintf("%.1f", pos.x() * (1 / this->scale_factor)));
     // Scene height - pos y because, on the scene, y grows downwards, while we want to see it growing upwards
     this->ui.lbl_mouse_pos_y->setText(text_number.asprintf("%.1f", (this->scene_h - pos.y()) * (1 / this->scale_factor)));
+}
+
+void CncTools::keyPressed(const int& key)
+{
+    switch (key)
+    {
+    case Qt::Key_A:
+        // TODO: Create the function to anchor the closest point shown on the QGraphicsScene
+        break;
+    default:
+        break;
+    }
 }
 
 QVector2D CncTools::getCanvasSize()

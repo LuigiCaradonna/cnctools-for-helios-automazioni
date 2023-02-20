@@ -43,11 +43,25 @@ protected:
         emit signalMousePos(pos);
     }
 
+    /*
+     * Override of the method keyPressEvent to emit a custom signal.
+     */
+    void keyPressEvent(QKeyEvent* event) override
+    {
+        // Emit the signal providing the key code
+        emit signalKeyPressed(event->key());
+    }
+
 signals:
     /*
      * Signal emitted when the mouse moves over the scene.
      */
     void signalMousePos(QPointF pos);
+
+    /*
+     * Signal emitted when a key on the keyboard is pressd while the QGraphicsScene is active.
+     */
+    void signalKeyPressed(int key);
 };
 
 class CncTools : public QMainWindow
@@ -191,6 +205,15 @@ public:
     void mousePosition(const QPointF& pos);
 
     /*
+     * Gets the code of the key pressed and triggers the appropriate action to perform.
+     *
+     * @param   const int&          key - Code of the key pressed
+     *
+     * @return void
+     */
+    void keyPressed(const int& key);
+
+    /*
      * Gets the visible size of the canvas, applying a compensation
      * for the px difference introduced by the antialiasing if necessary.
      *
@@ -317,16 +340,12 @@ protected slots:
     /*
      * This slot is called by the Tool's Translate Coords menu actions to activate the coordinates' translation tool
      *
-     * @param   QAction*    action
-     *
      * @return void
      */
     void slotToolsTranslateCoords();
 
     /*
      * This slot is called by the Tool's Enqueue PGR files menu actions to activate the enqueue tool
-     *
-     * @param   QAction*    action
      *
      * @return void
      */
