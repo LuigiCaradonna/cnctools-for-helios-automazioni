@@ -101,6 +101,17 @@ public:
      */
     QList<QVector2D> getZMaxList();
 
+    /*
+     * Searches the closest point among those contained into the coordinates loaded from the PGR file(s)
+     *
+     * @param   const   QList<QVector3D>&   coords
+     * @param   const   float               x
+     * @param   const   float               y
+     *
+     * @return QVector2D
+     */
+    QVector2D getClosestPoint(const QList<QVector3D>& coords, const float x, const float y);
+
 
     /********** PUBLIC FUNCTIONS **********/
 

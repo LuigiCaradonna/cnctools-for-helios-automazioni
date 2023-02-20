@@ -1240,14 +1240,9 @@ void CncTools::switchTranslator(QTranslator& translator, const QString& filename
         qApp->installTranslator(&translator);
 }
 
-QVector2D CncTools::getClosestPoint(const float x, const float y)
-{
-    // TODO: write the logic to find the closest point to the given coordinates
-}
-
 void CncTools::moveMousePointerToClosestPoint(const float x, const float y)
 {
-    QVector2D closest_point = this->getClosestPoint(x, y);
+    QVector2D closest_point = coord_manager->getClosestPoint(this->coords, x, y);
 
     // TODO: move the mouse pointer to the coordinates of colsest_point
 }

@@ -481,16 +481,6 @@ private:
     void switchTranslator(QTranslator& translator, const QString& filename);
 
     /*
-     * Searches the closest point among those contained into the coordinates loaded from the PGR file(s)
-     *
-     * @param   const float   x
-     * @param   const float   y
-     *
-     * @return QVector2D
-     */
-    QVector2D getClosestPoint(const float x, const float y);
-
-    /*
      * Moves the mouse pointer to the given coordinates over the QGraphicsScene
      *
      * @param   const float   x

@@ -66,6 +66,11 @@ QList<QVector2D> CoordManager::getZMaxList()
     return this->z_max_list;
 }
 
+QVector2D CoordManager::getClosestPoint(const QList<QVector3D>& coords, const float x, const float y)
+{
+    // TODO: write the logic to find the closest point to the given coordinates
+}
+
 /********** PUBLIC FUNCTIONS **********/
 
 void CoordManager::translateCoords(QList<QVector3D>& coords, int dx, int dy)
