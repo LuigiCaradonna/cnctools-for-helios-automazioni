@@ -353,9 +353,13 @@ void CncTools::keyPressed(const int& key)
     switch (key)
     {
     case Qt::Key_A:
-        if (this->ui.lbl_mouse_pos_x->text() != "" && this->ui.lbl_mouse_pos_y->text() != "")
+        // Search the closest point only if there are valid mouse coordinates and a PGR file was loaded
+        if (this->ui.lbl_mouse_pos_x->text() != "" && this->ui.lbl_mouse_pos_y->text() != "" && !this->coords.isEmpty())
         {
-            
+            this->moveMousePointerToClosestPoint(
+                this->ui.lbl_mouse_pos_x->text().toFloat(),
+                this->ui.lbl_mouse_pos_y->text().toFloat()
+            );
         }
         // TODO: Create the function to anchor the closest point shown on the QGraphicsScene
         break;
@@ -1234,6 +1238,18 @@ void CncTools::switchTranslator(QTranslator& translator, const QString& filename
     // Here Path and Filename have to be entered because the system didn't find the QM Files
     if (translator.load(this->m_langFullPath + "/" + filename))
         qApp->installTranslator(&translator);
+}
+
+QVector2D CncTools::getClosestPoint(const float x, const float y)
+{
+    // TODO: write the logic to find the closest point to the given coordinates
+}
+
+void CncTools::moveMousePointerToClosestPoint(const float x, const float y)
+{
+    QVector2D closest_point = this->getClosestPoint(x, y);
+
+    // TODO: move the mouse pointer to the coordinates of colsest_point
 }
 
 void CncTools::closeWindow()
