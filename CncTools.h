@@ -443,6 +443,7 @@ private:
     // Full path to the folder containing the language files.
     const QString m_langFullPath = m_application_root + "/" + m_langFolder;
 
+    QList<QVector3D> coords;
 
     /********** PRIVATE FUNCTIONS **********/
 
@@ -480,7 +481,17 @@ private:
     void switchTranslator(QTranslator& translator, const QString& filename);
 
     /*
-     * Closes the widget.
+     * Searches the closest point among those contained into the 
+     *
+     * @param   QTranslator&        translator
+     * @param   const QString&      filename
+     *
+     * @return void
+     */
+    QVector2D getClosestPoint(const int x, const int y);
+
+    /*
+     * Closes the main window.
      *
      * @return void
      */

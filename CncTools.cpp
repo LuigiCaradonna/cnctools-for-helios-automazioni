@@ -353,6 +353,10 @@ void CncTools::keyPressed(const int& key)
     switch (key)
     {
     case Qt::Key_A:
+        if (this->ui.lbl_mouse_pos_x->text() != "" && this->ui.lbl_mouse_pos_y->text() != "")
+        {
+            
+        }
         // TODO: Create the function to anchor the closest point shown on the QGraphicsScene
         break;
     default:
@@ -824,21 +828,21 @@ void CncTools::draw()
         // Reset the min and max values
         coord_manager->resetCoordinatesLimits();
 
-        // List of coordinates extracted by the iso files
-        QList<QVector3D> coords = coord_manager->processCoordinates(
+        // List of coordinates extracted from the iso files
+        this->coords = coord_manager->processCoordinates(
             this->iso_files,
             this->ui.chk_sculpture->isChecked(),
             this->ui.chk_fit->isChecked(),
             this->ui.in_width->text().toInt() != 0
         );
 
-        if (coords.isEmpty())
+        if (this->coords.isEmpty())
         {
             this->cancelDrawing();
             return;
         }
 
-        int num_coords = coords.length();
+        int num_coords = this->coords.length();
 
         // Prepare the scene
         this->setScene();
@@ -935,7 +939,7 @@ void CncTools::draw()
                 If this is not the end of the file and the tool must be raised
                 that means that the next movement will be to position the tool.
             */
-            if (i < num_coords && coords[i][0] == coord_manager->getUp())
+            if (i < num_coords && this->coords[i][0] == coord_manager->getUp())
             {
                 // Add the vertical movement length to the positioning distance
                 positioning_dst += abs(this->last_z);
@@ -949,7 +953,7 @@ void CncTools::draw()
                 If this is the end of the file and the tool must be raised,
                 the only distance to considerate is the vertical movement, then everything is over.
             */
-            else if (coords[i][0] == coord_manager->getUp())
+            else if (this->coords[i][0] == coord_manager->getUp())
             {
                 // Add the the absolute last z value to the positioning distance
                 positioning_dst += abs(this->last_z);
@@ -966,7 +970,7 @@ void CncTools::draw()
                 If the tool must be lowered(no need to check if we are at the end of the file
                 because if the tool lowerd, for sure there is something else to do).
             */
-            else if (coords[i][0] == coord_manager->getDown())
+            else if (this->coords[i][0] == coord_manager->getDown())
             {
                 /*
                     I do not update the Z distance now, because I should read the next tuple to know it.
@@ -984,12 +988,12 @@ void CncTools::draw()
             // If the tool is repositioning on the XY plane
             else if (repositioning)
             {
-                dx = pow(coords[i][0] - current_position[0], 2);
-                dy = pow(coords[i][1] - current_position[1], 2);
+                dx = pow(this->coords[i][0] - current_position[0], 2);
+                dy = pow(this->coords[i][1] - current_position[1], 2);
                 positioning_dst += sqrt(dx + dy);
 
                 // Update the current position, Z position does not change over repositionings
-                current_position = QVector3D(coords[i][0], coords[i][1], current_position[2]);
+                current_position = QVector3D(this->coords[i][0], this->coords[i][1], current_position[2]);
 
                 // Set the flags
                 lowering = false;
@@ -1000,10 +1004,10 @@ void CncTools::draw()
             else if (lowering)
             {
                 // Here there will certainly be a tuple containing only a Z coordinate changing
-                positioning_dst += abs(coords[i][2]);
+                positioning_dst += abs(this->coords[i][2]);
 
                 // Update the current position
-                current_position = QVector3D(current_position[0], current_position[1], coords[i][2]);
+                current_position = QVector3D(current_position[0], current_position[1], this->coords[i][2]);
 
                 // Set the flags
                 lowering = false;
@@ -1014,9 +1018,9 @@ void CncTools::draw()
             else if (drawing)
             {
                 // Calculate the engraving distance
-                dx = pow(coords[i][0] - current_position[0], 2);
-                dy = pow(coords[i][1] - current_position[1], 2);
-                dz = pow(coords[i][2] - current_position[2], 2);
+                dx = pow(this->coords[i][0] - current_position[0], 2);
+                dy = pow(this->coords[i][1] - current_position[1], 2);
+                dz = pow(this->coords[i][2] - current_position[2], 2);
                 engraving_dst += sqrt(dx + dy + dz);
 
                 /*
@@ -1030,8 +1034,8 @@ void CncTools::draw()
                 );
 
                 p2 = QPointF(
-                    coords[i][0] * this->scale_factor,
-                    this->scene_h - (coords[i][1] * this->scale_factor)
+                    this->coords[i][0] * this->scale_factor,
+                    this->scene_h - (this->coords[i][1] * this->scale_factor)
                 );
 
                 // If the gradient effect is required
@@ -1041,7 +1045,7 @@ void CncTools::draw()
                         abs(current_position[2]), 10, abs_z_max, 0, 255);
 
                     end_mapped_color = this->mapRange(
-                        abs(coords[i][2]), 10, abs_z_max, 0, 255);
+                        abs(this->coords[i][2]), 10, abs_z_max, 0, 255);
 
                     // If the user requires to draw the segments using colors
                     if (draw_color)
@@ -1090,10 +1094,10 @@ void CncTools::draw()
                 this->scene->addLine(QLineF(p1, p2), pen = pen);
 
                 // Update the current position
-                current_position = QVector3D(coords[i][0], coords[i][1], coords[i][2]);
+                current_position = QVector3D(this->coords[i][0], this->coords[i][1], this->coords[i][2]);
 
                 // Update the last z value
-                this->last_z = coords[i][2];
+                this->last_z = this->coords[i][2];
 
                 // Update the lines count
                 lines += 1;
