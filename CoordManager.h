@@ -95,9 +95,9 @@ public:
     float getOffsetY();
 
     /*
-     * Gets the list of the point where the engraving is at the maximum depth.
+     * Gets the list of the points where the engraving reaches the maximum depth.
      *
-     * @return QList<QVector2D>     - The list of the points where the engraving is at the maximum depth.
+     * @return QList<QVector2D>     - The list of the points where the engraving reaches the maximum depth.
      */
     QList<QVector2D> getZMaxList();
 
@@ -108,9 +108,9 @@ public:
      * @param   const   float               x
      * @param   const   float               y
      *
-     * @return QVector2D
+     * @return QVector3D
      */
-    QVector2D getClosestPoint(const QList<QVector3D>& coords, const float x, const float y);
+    QVector3D getClosestPoint(const QList<QVector3D>& coords, const float x, const float y);
 
 
     /********** PUBLIC FUNCTIONS **********/

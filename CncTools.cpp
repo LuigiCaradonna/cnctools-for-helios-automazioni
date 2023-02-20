@@ -1242,9 +1242,9 @@ void CncTools::switchTranslator(QTranslator& translator, const QString& filename
 
 void CncTools::moveMousePointerToClosestPoint(const float x, const float y)
 {
-    QVector2D closest_point = coord_manager->getClosestPoint(this->coords, x, y);
+    QVector3D closest_point = coord_manager->getClosestPoint(this->coords, x, y);
 
-    // TODO: move the mouse pointer to the coordinates of colsest_point
+    // Move the mouse pointer to the coordinates of colsest_point
 }
 
 void CncTools::closeWindow()

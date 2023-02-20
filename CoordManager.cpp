@@ -66,9 +66,33 @@ QList<QVector2D> CoordManager::getZMaxList()
     return this->z_max_list;
 }
 
-QVector2D CoordManager::getClosestPoint(const QList<QVector3D>& coords, const float x, const float y)
+QVector3D CoordManager::getClosestPoint(const QList<QVector3D>& coords, const float x, const float y)
 {
+    float dx = 0;
+    float dy = 0;
+    float closest_dist = 9999.f;
+    float current_dist = 0;
+    QVector3D point;
+
     // TODO: write the logic to find the closest point to the given coordinates
+    for (int i = 0; i < coords.length(); ++i)
+    {
+        if (coords[i][0] != this->UP && coords[i][0] != this->DOWN)
+        {
+            dx = coords[i][0] - x;
+            dy = coords[i][1] - y;
+            current_dist = sqrt((dx * dx) + (dy * dy));
+
+            if (current_dist < closest_dist)
+            {
+                point[0] = coords[i][0];
+                point[1] = coords[i][1];
+                point[2] = coords[i][2];
+            }
+        }
+    }
+
+    return point;
 }
 
 /********** PUBLIC FUNCTIONS **********/

@@ -15,6 +15,7 @@
 #include <QVector3D>
 #include <QFile>
 #include <QTimer>
+#include <QCursor>
 #include "json.hpp"
 #include "ui_CncTools.h"
 #include "CoordManager.h"
