@@ -10,7 +10,6 @@
 #include <QProgressDialog>
 #include <QTranslator>
 #include <fstream>
-#include <iostream>
 #include <QVector2D>
 #include <QVector3D>
 #include <QFile>
@@ -19,6 +18,8 @@
 #include "json.hpp"
 #include "ui_CncTools.h"
 #include "CoordManager.h"
+#include "CncGraphicsScene.h"
+#include "CncGraphicsView.h"
 #include "Helpers.h"
 #include "Config.h"
 #include "SceneZoom.h"
@@ -26,44 +27,6 @@
 #include "ToolEnqueue.h"
 
 using json = nlohmann::json;
-
-class MyGraphicScene : public QGraphicsScene
-{
-    Q_OBJECT
-
-protected:
-    /*
-     * Override of the method mouseMoveEvent to emit a custom signal.
-     */
-    void mouseMoveEvent(QGraphicsSceneMouseEvent* event) override
-    {
-        // Mouse pointer position over the scene
-        QPointF pos = event->scenePos();
-
-        // Emit the signal providing the mouse position as parameter
-        emit signalMousePos(pos);
-    }
-
-    /*
-     * Override of the method keyPressEvent to emit a custom signal.
-     */
-    void keyPressEvent(QKeyEvent* event) override
-    {
-        // Emit the signal providing the key code
-        emit signalKeyPressed(event->key());
-    }
-
-signals:
-    /*
-     * Signal emitted when the mouse moves over the scene.
-     */
-    void signalMousePos(QPointF pos);
-
-    /*
-     * Signal emitted when a key on the keyboard is pressd while the QGraphicsScene is active.
-     */
-    void signalKeyPressed(int key);
-};
 
 class CncTools : public QMainWindow
 {
@@ -407,7 +370,10 @@ private:
     QTimer* reset_timer;
 
     // Scene where the drawing will be displayed
-    MyGraphicScene* scene;
+    CncGraphicsScene* scene;
+
+    // The view that displays the scene
+    CncGraphicsView* view;
 
     // Configuration manager
     Config* config;

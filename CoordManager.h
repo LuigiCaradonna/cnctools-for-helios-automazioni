@@ -7,6 +7,7 @@
 #include <QTextStream>
 #include <QProgressDialog>
 #include <QTranslator>
+#include <iostream>
 #include "Helpers.h"
 
 class CoordManager : QObject
@@ -198,4 +199,3 @@ private:
     // Offset along the y axis to get the drawing in the positive area
     int offset_y = 0;
 };
-

@@ -34,13 +34,16 @@ CncTools::CncTools(QWidget* parent)
     this->createLanguageMenu();
 
     // Instantiates a scene. The panning is enabled/disabled into the canvas' ui settings
-    this->scene = new MyGraphicScene();
+    this->scene = new CncGraphicsScene();
     // Intercepts the signal emitted and connects it to the mousePosition() method
-    this->connect(this->scene, &MyGraphicScene::signalMousePos, this, &CncTools::mousePosition);
-    this->connect(this->scene, &MyGraphicScene::signalKeyPressed, this, &CncTools::keyPressed);
+    this->connect(this->scene, &CncGraphicsScene::signalMousePos, this, &CncTools::mousePosition);
+    this->connect(this->scene, &CncGraphicsScene::signalKeyPressed, this, &CncTools::keyPressed);
+
+    // Initialize the view
+    this->view = new CncGraphicsView(this->scene);
 
     // Assign the scene to the canvas
-    this->ui.canvas->setScene(scene);
+    this->ui.canvas->setScene(this->scene);
     // Set the canvas alignment
     this->ui.canvas->setAlignment(Qt::AlignTop | Qt::AlignLeft);
 
@@ -110,6 +113,7 @@ CncTools::CncTools(QWidget* parent)
 CncTools::~CncTools()
 {
     delete this->scene;
+    delete this->view;
     delete this->reset_timer;
     delete this->config;
     delete this->coord_manager;
@@ -1245,6 +1249,14 @@ void CncTools::moveMousePointerToClosestPoint(const float x, const float y)
     QVector3D closest_point = coord_manager->getClosestPoint(this->coords, x, y);
 
     // Move the mouse pointer to the coordinates of colsest_point
+    // TODO: make the coordinates relative to the scene
+    QPoint pos(
+        (closest_point[0] * this->scale_factor) + this->canvas_expanded,
+        this->scene_h - (closest_point[1] * (1 / this->scale_factor))
+    );
+    
+    QPoint globalPos = this->view->mapToGlobal(pos);
+    QCursor::setPos(globalPos);
 }
 
 void CncTools::closeWindow()

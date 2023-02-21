@@ -68,10 +68,11 @@ QList<QVector2D> CoordManager::getZMaxList()
 
 QVector3D CoordManager::getClosestPoint(const QList<QVector3D>& coords, const float x, const float y)
 {
+    float cx, cy, cz;
     float dx = 0;
     float dy = 0;
     float closest_dist = 9999.f;
-    float current_dist = 0;
+    float current_dist = 0.f;
     QVector3D point;
 
     // TODO: write the logic to find the closest point to the given coordinates
@@ -79,15 +80,21 @@ QVector3D CoordManager::getClosestPoint(const QList<QVector3D>& coords, const fl
     {
         if (coords[i][0] != this->UP && coords[i][0] != this->DOWN)
         {
-            dx = coords[i][0] - x;
-            dy = coords[i][1] - y;
+            cx = coords[i][0];
+            cy = coords[i][1];
+            cz = coords[i][2];
+
+            dx = cx - x;
+            dy = cy - y;
             current_dist = sqrt((dx * dx) + (dy * dy));
 
             if (current_dist < closest_dist)
             {
-                point[0] = coords[i][0];
-                point[1] = coords[i][1];
-                point[2] = coords[i][2];
+                point[0] = cx;
+                point[1] = cy;
+                point[2] = cz;
+
+                closest_dist = current_dist;
             }
         }
     }
