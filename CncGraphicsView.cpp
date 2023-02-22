@@ -6,10 +6,13 @@
 
 /********** CONSTRUCTOR **********/
 
-CncGraphicsView::CncGraphicsView(QGraphicsScene* scene)
+CncGraphicsView::CncGraphicsView(QGraphicsScene* scene, QWidget* parent) :
+    QGraphicsView(parent)
 {
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+
+    setDragMode(QGraphicsView::ScrollHandDrag);
 
     setMaxSize();
     centerOn(0, 0);
@@ -19,6 +22,8 @@ CncGraphicsView::CncGraphicsView(QGraphicsScene* scene)
     _doMousePanning = false;
     _doKeyZoom = false;
     _scale = 1.0;
+
+    setScene(scene);
 
     panButton = Qt::MiddleButton;
     zoomKey = Qt::Key_Z;

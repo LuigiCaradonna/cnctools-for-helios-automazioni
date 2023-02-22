@@ -10,7 +10,7 @@ class CncGraphicsView : public QGraphicsView
     Q_OBJECT
 
 public:
-    CncGraphicsView(QGraphicsScene* scene);
+    explicit CncGraphicsView(QGraphicsScene* scene, QWidget* parent = 0);
 
     qreal panSpeed;
     qreal zoomDelta;
