@@ -1,5 +1,7 @@
 #include "CncGraphicsScene.h"
 
+/********** PROTECTED FUNCTIONS **********/
+
 void CncGraphicsScene::mouseMoveEvent(QGraphicsSceneMouseEvent* event)
 {
     // Mouse pointer position over the scene

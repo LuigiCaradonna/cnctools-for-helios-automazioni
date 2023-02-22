@@ -4,53 +4,53 @@
 <context>
     <name>CncTools</name>
     <message>
-        <location filename="CncTools.cpp" line="436"/>
+        <location filename="CncTools.cpp" line="461"/>
         <source>open_file</source>
         <translation>Open Files</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="485"/>
+        <location filename="CncTools.cpp" line="510"/>
         <source>wrong_extension</source>
         <translation>File estension is not correct</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="499"/>
+        <location filename="CncTools.cpp" line="524"/>
         <source>sel_valid_iso</source>
         <translation>Select valid ISO files</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="521"/>
+        <location filename="CncTools.cpp" line="546"/>
         <source>prov_valid_width</source>
         <translation>Provide a valid width (integer number equals or greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="547"/>
+        <location filename="CncTools.cpp" line="572"/>
         <source>prov_valid_height</source>
         <translation>Provide a valid height (integer number equals or greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="573"/>
+        <location filename="CncTools.cpp" line="598"/>
         <source>prov_valid_speed</source>
         <translation>Provide a valid speed (integer greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="588"/>
-        <location filename="CncTools.cpp" line="597"/>
+        <location filename="CncTools.cpp" line="613"/>
+        <location filename="CncTools.cpp" line="622"/>
         <source>set_dims_none</source>
         <translation>Set both the dimensions or none</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="877"/>
+        <location filename="CncTools.cpp" line="902"/>
         <source>no</source>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="891"/>
+        <location filename="CncTools.cpp" line="916"/>
         <source>proc_coords</source>
         <translation>Processing coordinates</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="892"/>
+        <location filename="CncTools.cpp" line="917"/>
         <source>cancel</source>
         <translation>Cancel</translation>
     </message>
@@ -314,13 +314,13 @@
 <context>
     <name>CoordManager</name>
     <message>
-        <location filename="CoordManager.cpp" line="188"/>
+        <location filename="CoordManager.cpp" line="224"/>
         <source>extract_coords</source>
         <oldsource>Extracting coordinates</oldsource>
         <translation>Extracting coordinates</translation>
     </message>
     <message>
-        <location filename="CoordManager.cpp" line="188"/>
+        <location filename="CoordManager.cpp" line="224"/>
         <source>cancel</source>
         <translation>Cancel</translation>
     </message>
@@ -487,14 +487,19 @@
         <translation>Provide a valid value for Y translation</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="208"/>
+        <location filename="ToolTranslation.cpp" line="214"/>
         <source>error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="208"/>
+        <location filename="ToolTranslation.cpp" line="214"/>
         <source>cant_open_save_file</source>
         <translation>It is not possible to open the destination file</translation>
+    </message>
+    <message>
+        <location filename="ToolTranslation.cpp" line="316"/>
+        <source>translation_success</source>
+        <translation>Translation succeeded</translation>
     </message>
 </context>
 <context>

@@ -4,53 +4,53 @@
 <context>
     <name>CncTools</name>
     <message>
-        <location filename="CncTools.cpp" line="436"/>
+        <location filename="CncTools.cpp" line="461"/>
         <source>open_file</source>
         <translation>Apri File</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="485"/>
+        <location filename="CncTools.cpp" line="510"/>
         <source>wrong_extension</source>
         <translation>Estensione del file non corretta</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="499"/>
+        <location filename="CncTools.cpp" line="524"/>
         <source>sel_valid_iso</source>
         <translation>Seleziona file ISO validi</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="521"/>
+        <location filename="CncTools.cpp" line="546"/>
         <source>prov_valid_width</source>
         <translation>Fornisci una larghezza valida (numero intero maggiore o pari a zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="547"/>
+        <location filename="CncTools.cpp" line="572"/>
         <source>prov_valid_height</source>
         <translation>Fornisci una altezza valida (numero intero maggiore o pari a zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="573"/>
+        <location filename="CncTools.cpp" line="598"/>
         <source>prov_valid_speed</source>
         <translation>Fornisci una velocità valida (numero intero maggiore di zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="588"/>
-        <location filename="CncTools.cpp" line="597"/>
+        <location filename="CncTools.cpp" line="613"/>
+        <location filename="CncTools.cpp" line="622"/>
         <source>set_dims_none</source>
         <translation>Imposta entrambe le dimensioni o nessuna</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="877"/>
+        <location filename="CncTools.cpp" line="902"/>
         <source>no</source>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="891"/>
+        <location filename="CncTools.cpp" line="916"/>
         <source>proc_coords</source>
         <translation>Elaborazione coordinate</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="892"/>
+        <location filename="CncTools.cpp" line="917"/>
         <source>cancel</source>
         <translation>Annulla</translation>
     </message>
@@ -314,13 +314,13 @@
 <context>
     <name>CoordManager</name>
     <message>
-        <location filename="CoordManager.cpp" line="188"/>
+        <location filename="CoordManager.cpp" line="224"/>
         <source>extract_coords</source>
         <oldsource>Extracting coordinates</oldsource>
         <translation>Estrazione coordinate</translation>
     </message>
     <message>
-        <location filename="CoordManager.cpp" line="188"/>
+        <location filename="CoordManager.cpp" line="224"/>
         <source>cancel</source>
         <translation>Annulla</translation>
     </message>
@@ -487,14 +487,19 @@
         <translation>Fornisci un valore valido per la traslazione Y</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="208"/>
+        <location filename="ToolTranslation.cpp" line="214"/>
         <source>error</source>
         <translation>Errore</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="208"/>
+        <location filename="ToolTranslation.cpp" line="214"/>
         <source>cant_open_save_file</source>
         <translation>Non è possibile aprire il file di destinazione</translation>
+    </message>
+    <message>
+        <location filename="ToolTranslation.cpp" line="316"/>
+        <source>translation_success</source>
+        <translation>Traslazione eseguita correttamente</translation>
     </message>
 </context>
 <context>

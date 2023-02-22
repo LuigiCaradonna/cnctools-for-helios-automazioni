@@ -172,6 +172,12 @@ bool ToolTranslation::checkData()
 
 void ToolTranslation::translate()
 {
+    // Message to show into the log area
+    QString log_message = "";
+
+    // Reset the log area
+    this->ui.out_log->setPlainText("");
+
     /* 
         Counter to skip the first occurrence of G12 which is just the starting position
         the actual position where the engraving starts is represented by the second G12.
@@ -306,6 +312,9 @@ void ToolTranslation::translate()
         }
 
         file.close();
+
+        log_message = tr("translation_success");
+        this->ui.out_log->setPlainText(log_message);
     }
 }
 

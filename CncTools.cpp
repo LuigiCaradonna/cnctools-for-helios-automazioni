@@ -17,8 +17,8 @@ CncTools::CncTools(QWidget* parent)
 
     this->coord_manager = new CoordManager();
 
-    this->scene_zoom = new SceneZoom(this->ui.canvas);
-    this->scene_zoom->setModifiers(Qt::NoModifier);
+    // this->scene_zoom = new SceneZoom(this->ui.canvas);
+    // this->scene_zoom->setModifiers(Qt::NoModifier);
 
     /*
         Format systems' language to use it as default,
@@ -98,7 +98,7 @@ CncTools::CncTools(QWidget* parent)
 
     // Connect the timer's timeout signal to the draw() method
     this->connect(reset_timer, &QTimer::timeout, this, &CncTools::draw);
-    this->connect(scene_zoom, &SceneZoom::zoomed, this, &CncTools::zoomLevel);
+    // this->connect(scene_zoom, &SceneZoom::zoomed, this, &CncTools::zoomLevel);
 
     // Says whether the timer must be used or not
     this->delay_enabled = true;
