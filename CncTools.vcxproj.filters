@@ -61,9 +61,6 @@
     <ClCompile Include="CncGraphicsScene.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="CncGraphicsView.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Config.h">
@@ -90,9 +87,6 @@
       <Filter>Header Files</Filter>
     </QtMoc>
     <QtMoc Include="CncGraphicsScene.h">
-      <Filter>Header Files</Filter>
-    </QtMoc>
-    <QtMoc Include="CncGraphicsView.h">
       <Filter>Header Files</Filter>
     </QtMoc>
   </ItemGroup>

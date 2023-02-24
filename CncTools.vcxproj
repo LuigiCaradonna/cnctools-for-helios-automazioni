@@ -91,7 +91,6 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CncGraphicsScene.cpp" />
-    <ClCompile Include="CncGraphicsView.cpp" />
     <ClCompile Include="SceneZoom.cpp" />
     <ClCompile Include="ToolEnqueue.cpp" />
     <ClCompile Include="ToolTranslation.cpp" />
@@ -108,7 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <QtMoc Include="CncGraphicsScene.h" />
-    <QtMoc Include="CncGraphicsView.h" />
     <ClInclude Include="Config.h" />
     <QtMoc Include="ToolEnqueue.h" />
     <QtMoc Include="ToolTranslation.h" />
