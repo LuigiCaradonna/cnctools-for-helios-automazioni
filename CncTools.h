@@ -372,9 +372,6 @@ private:
     // Scene where the drawing will be displayed
     CncGraphicsScene* scene;
 
-    // The view that displays the scene
-    CncGraphicsView* view;
-
     // Configuration manager
     Config* config;
 

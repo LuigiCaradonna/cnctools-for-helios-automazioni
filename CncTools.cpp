@@ -39,9 +39,6 @@ CncTools::CncTools(QWidget* parent)
     this->connect(this->scene, &CncGraphicsScene::signalMousePos, this, &CncTools::mousePosition);
     this->connect(this->scene, &CncGraphicsScene::signalKeyPressed, this, &CncTools::keyPressed);
 
-    // Initialize the view
-    this->view = new CncGraphicsView(this->scene);
-
     // Assign the scene to the canvas
     this->ui.canvas->setScene(this->scene);
     // Set the canvas alignment
@@ -113,7 +110,6 @@ CncTools::CncTools(QWidget* parent)
 CncTools::~CncTools()
 {
     delete this->scene;
-    delete this->view;
     delete this->reset_timer;
     delete this->config;
     delete this->coord_manager;
@@ -1255,7 +1251,7 @@ void CncTools::moveMousePointerToClosestPoint(const float x, const float y)
         this->scene_h - (closest_point[1] * (1 / this->scale_factor))
     );
     
-    QPoint globalPos = this->view->mapToGlobal(pos);
+    QPoint globalPos = this->ui.canvas->mapToGlobal(pos);
     QCursor::setPos(globalPos);
 }
 
