@@ -130,5 +130,5 @@ To compile the software, `msvc2019+`, `Qt 6.0+` are required.
 
 Inside the folder `dist` the latest compiled version of the software for Windows is available in a zip format.  
 There is no need to install the software.  
-Unpack the zip package, inside the folder `Isoviewer`, run the file `Isoviewer.exe`.  
+Unpack the zip package, inside the folder `CncTools`, run the file `CncTools.exe`.  
 > Windows 10 is required since previous versions are no more supported by `Qt`.

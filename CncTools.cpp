@@ -17,8 +17,8 @@ CncTools::CncTools(QWidget* parent)
 
     this->coord_manager = new CoordManager();
 
-    // this->scene_zoom = new SceneZoom(this->ui.canvas);
-    // this->scene_zoom->setModifiers(Qt::NoModifier);
+    this->scene_zoom = new SceneZoom(this->ui.canvas);
+    this->scene_zoom->setModifiers(Qt::NoModifier);
 
     /*
         Format systems' language to use it as default,
