@@ -137,8 +137,9 @@ void ToolEnqueue::enqueueFiles()
                 foreach(QString line, file_content)
                 {
                     // Get the speed set for the job
+
                     if (line.indexOf("G73 X") == 0) {
-                        QStringList subline = subline = line.split(" ");
+                        QStringList subline = line.split(" ");
 
                         // Compare with the speed for the first job and if this is different
                         if (subline[1].mid(1).toInt() != speed) {
@@ -166,9 +167,11 @@ void ToolEnqueue::enqueueFiles()
         }
 
         // Show an alert if different_speed is true
+        /*
         if (different_speeds) {
             QMessageBox::warning(this, "Cnc Tools", tr("different_speeds") + ": " + QString::number(speed)+" mm/min", QMessageBox::Ok);
         }
+        */
     }
 }
 
