@@ -19,7 +19,6 @@
 #include "ui_CncTools.h"
 #include "CoordManager.h"
 #include "CncGraphicsScene.h"
-#include "CncGraphicsView.h"
 #include "Helpers.h"
 #include "Config.h"
 #include "SceneZoom.h"
