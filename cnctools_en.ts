@@ -4,53 +4,53 @@
 <context>
     <name>CncTools</name>
     <message>
-        <location filename="CncTools.cpp" line="461"/>
+        <location filename="CncTools.cpp" line="457"/>
         <source>open_file</source>
         <translation>Open Files</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="510"/>
+        <location filename="CncTools.cpp" line="506"/>
         <source>wrong_extension</source>
         <translation>File estension is not correct</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="524"/>
+        <location filename="CncTools.cpp" line="520"/>
         <source>sel_valid_iso</source>
         <translation>Select valid ISO files</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="546"/>
+        <location filename="CncTools.cpp" line="542"/>
         <source>prov_valid_width</source>
         <translation>Provide a valid width (integer number equals or greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="572"/>
+        <location filename="CncTools.cpp" line="568"/>
         <source>prov_valid_height</source>
         <translation>Provide a valid height (integer number equals or greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="598"/>
+        <location filename="CncTools.cpp" line="594"/>
         <source>prov_valid_speed</source>
         <translation>Provide a valid speed (integer greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="613"/>
-        <location filename="CncTools.cpp" line="622"/>
+        <location filename="CncTools.cpp" line="609"/>
+        <location filename="CncTools.cpp" line="618"/>
         <source>set_dims_none</source>
         <translation>Set both the dimensions or none</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="902"/>
+        <location filename="CncTools.cpp" line="898"/>
         <source>no</source>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="916"/>
+        <location filename="CncTools.cpp" line="912"/>
         <source>proc_coords</source>
         <translation>Processing coordinates</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="917"/>
+        <location filename="CncTools.cpp" line="913"/>
         <source>cancel</source>
         <translation>Cancel</translation>
     </message>
@@ -333,42 +333,47 @@
         <translation>Open Files</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="102"/>
+        <location filename="ToolEnqueue.cpp" line="104"/>
         <source>error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="102"/>
+        <location filename="ToolEnqueue.cpp" line="104"/>
         <source>cant_open_save_file</source>
         <translation>It is not possible to open the destination file</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="144"/>
+        <location filename="ToolEnqueue.cpp" line="163"/>
         <source>enqueue_success</source>
         <translation>Enqueue successful</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="178"/>
+        <location filename="ToolEnqueue.cpp" line="170"/>
+        <source>different_speeds</source>
+        <translation>The selected jobs have different execution speeds. All the jobs will be executed at</translation>
+    </message>
+    <message>
+        <location filename="ToolEnqueue.cpp" line="202"/>
         <source>save_to</source>
         <translation>Save to</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="192"/>
+        <location filename="ToolEnqueue.cpp" line="216"/>
         <source>no_file_selected</source>
         <translation>No file selected</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="207"/>
+        <location filename="ToolEnqueue.cpp" line="231"/>
         <source>file_not_found</source>
         <translation>File not found</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="215"/>
+        <location filename="ToolEnqueue.cpp" line="239"/>
         <source>wrong_extension</source>
         <translation>File estension is not correct</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="223"/>
+        <location filename="ToolEnqueue.cpp" line="247"/>
         <source>sel_valid_iso</source>
         <translation>Select valid ISO files</translation>
     </message>

@@ -78,6 +78,8 @@ void ToolEnqueue::removeFiles()
 void ToolEnqueue::enqueueFiles()
 {
     int files_to_enqueue = this->ui.enqueuedFiles->count();
+    int speed = 0;
+    bool different_speeds = false;
 
     // If the data are correct
     if (this->checkData())
@@ -111,6 +113,12 @@ void ToolEnqueue::enqueueFiles()
             // Write the whole content of the first file into the destination file
             foreach(QString line, file_content)
             {
+                // Get the speed set for the job
+                if (line.indexOf("G73 X") == 0) {
+                    QStringList subline = line.split(" ");
+                    speed = subline[1].mid(1).toInt();
+                }
+
                 stream << line + "\n";
             }
 
@@ -128,6 +136,18 @@ void ToolEnqueue::enqueueFiles()
                 // Add the content of the source file into the destination file
                 foreach(QString line, file_content)
                 {
+                    // Get the speed set for the job
+
+                    if (line.indexOf("G73 X") == 0) {
+                        QStringList subline = line.split(" ");
+
+                        // Compare with the speed for the first job and if this is different
+                        if (subline[1].mid(1).toInt() != speed) {
+                            // Set the flag variable as true
+                            different_speeds = true;
+                        }
+                    }
+
                     // Copy only the lines from the 7th ahead
                     if (line_count >= 6)
                     {
@@ -145,6 +165,13 @@ void ToolEnqueue::enqueueFiles()
 
             file.close();
         }
+
+        // Show an alert if different_speed is true
+        /*
+        if (different_speeds) {
+            QMessageBox::warning(this, "Cnc Tools", tr("different_speeds") + ": " + QString::number(speed)+" mm/min", QMessageBox::Ok);
+        }
+        */
     }
 }
 
