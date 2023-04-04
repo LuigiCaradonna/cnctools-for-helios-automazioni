@@ -104,7 +104,7 @@ The tool will only consider the first file in the list to decide the speed. That
 
 ### Translation tool
 
-![Queuing tool](/translate-tool.png)  
+![Translate tool](/translate-tool.png)  
 This tool is useful to translate the coordinates of a path already generated, without the need to edit the drawing inside the CAD software and to recalculate the path.  
   
 Select the source file, set the name and the location for the new file.  
