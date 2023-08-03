@@ -4,8 +4,8 @@
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QTextStream>
-#include "Helpers.h"
 #include "ui_ToolEnqueue.h"
+#include "Helpers.h"
 
 class ToolEnqueue : public QMainWindow
 {
