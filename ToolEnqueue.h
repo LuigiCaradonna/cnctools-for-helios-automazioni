@@ -1,13 +1,13 @@
 #pragma once
 
-#include <QMainWindow>
+#include <QDialog>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QTextStream>
 #include "ui_ToolEnqueue.h"
 #include "Helpers.h"
 
-class ToolEnqueue : public QMainWindow
+class ToolEnqueue : public QDialog
 {
 	Q_OBJECT
 
@@ -41,6 +41,7 @@ private:
 	QStringList iso_files;
 	// Destination file name
 	QString destination;
+	QWidget* parent;
 
 	/*
 		Folder to open when clicking the "Load Files" button, initialized with the value contained into

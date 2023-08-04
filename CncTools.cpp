@@ -1203,14 +1203,16 @@ void CncTools::slotLanguageChanged(QAction* action)
 
 void CncTools::slotToolsTranslateCoords()
 {
-    this->tool_translation = new ToolTranslation(this->folder);
-    this->tool_translation->show();
+    this->tool_translation = new ToolTranslation(this->folder, this);
+    this->tool_translation->setModal(true);
+    this->tool_translation->exec();
 }
 
 void CncTools::slotToolsEnqueuePgr()
 {
-    this->tool_enqueue = new ToolEnqueue(this->folder);
-    this->tool_enqueue->show();
+    this->tool_enqueue = new ToolEnqueue(this->folder, this);
+    this->tool_enqueue->setModal(true);
+    this->tool_enqueue->exec();
 }
 
 

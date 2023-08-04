@@ -3,7 +3,7 @@
 /********** CONSTRUCTOR **********/
 
 ToolTranslation::ToolTranslation(std::string f, QWidget *parent)
-	: folder(f), QMainWindow(parent)
+	: folder(f), parent(parent)
 {
 	this->ui.setupUi(this);
 

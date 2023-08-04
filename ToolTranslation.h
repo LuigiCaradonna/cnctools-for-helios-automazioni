@@ -1,13 +1,13 @@
 #pragma once
 
-#include <QMainWindow>
+#include <QDialog>
 #include <QFileDialog>
 #include <QMessageBox>
 #include <QTextStream>
 #include "ui_ToolTranslation.h"
 #include "Helpers.h"
 
-class ToolTranslation : public QMainWindow
+class ToolTranslation : public QDialog
 {
 	Q_OBJECT
 
@@ -39,6 +39,7 @@ private:
 	QString source;
 	// Destination file name
 	QString destination;
+	QWidget* parent;
 
 	// Folder to open when clicking the "Load Files" button, initialized with the value contained into
 	// the config file and updated each time a file is loaded from a different folder to always open

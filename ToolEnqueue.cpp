@@ -3,9 +3,9 @@
 /********** CONSTRUCTOR **********/
 
 ToolEnqueue::ToolEnqueue(std::string f, QWidget *parent)
-	: folder(f), QMainWindow(parent)
+	: folder(f), parent(parent)
 {
-	ui.setupUi(this);
+	this->ui.setupUi(this);
 
     // Sets an icon for the window
     this->setWindowIcon(QIcon("favicon.png"));
