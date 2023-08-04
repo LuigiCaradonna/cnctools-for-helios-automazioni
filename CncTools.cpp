@@ -8,7 +8,7 @@ CncTools::CncTools(QWidget* parent)
     this->ui.setupUi(this);
 
     // Sets an icon for the window
-    this->setWindowIcon(QIcon("favicon.png"));
+    this->setWindowIcon(QIcon("CncTools.png"));
 
     // Set the default path in case the config file has an empty one
     this->folder = "C:/helios1/archivio";
