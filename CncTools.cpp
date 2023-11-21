@@ -1206,6 +1206,9 @@ void CncTools::slotToolsTranslateCoords()
     this->tool_translation = new ToolTranslation(this->folder, this);
     this->tool_translation->setModal(true);
     this->tool_translation->exec();
+
+    // Update the last used folder
+    this->updateFolder(QString::fromStdString(this->tool_translation->folder));
 }
 
 void CncTools::slotToolsEnqueuePgr()
@@ -1213,6 +1216,9 @@ void CncTools::slotToolsEnqueuePgr()
     this->tool_enqueue = new ToolEnqueue(this->folder, this);
     this->tool_enqueue->setModal(true);
     this->tool_enqueue->exec();
+
+    // Update the last used folder
+    this->updateFolder(QString::fromStdString(this->tool_enqueue->folder));
 }
 
 

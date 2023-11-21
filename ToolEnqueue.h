@@ -12,6 +12,13 @@ class ToolEnqueue : public QDialog
 	Q_OBJECT
 
 public:
+	/*
+		Folder to open when clicking the "Load Files" button, initialized with the value contained into
+		the config file and updated each time a file is loaded from a different folder to always open
+		the last used folder.
+	*/
+	std::string folder;
+
 	/********** CONSTRUCTOR **********/
 
 	/*
@@ -42,13 +49,6 @@ private:
 	// Destination file name
 	QString destination;
 	QWidget* parent;
-
-	/*
-		Folder to open when clicking the "Load Files" button, initialized with the value contained into
-		the config file and updated each time a file is loaded from a different folder to always open
-		the last used folder.
-	*/
-	std::string folder;
 
 	/********** PRIVATE FUNCTIONS **********/
 
