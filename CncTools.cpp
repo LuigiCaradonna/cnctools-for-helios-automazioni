@@ -1209,6 +1209,8 @@ void CncTools::slotToolsTranslateCoords()
 
     // Update the last used folder
     this->updateFolder(QString::fromStdString(this->tool_translation->folder));
+    
+    delete this->tool_translation;
 }
 
 void CncTools::slotToolsEnqueuePgr()
@@ -1219,6 +1221,8 @@ void CncTools::slotToolsEnqueuePgr()
 
     // Update the last used folder
     this->updateFolder(QString::fromStdString(this->tool_enqueue->folder));
+
+    delete this->tool_enqueue;
 }
 
 
