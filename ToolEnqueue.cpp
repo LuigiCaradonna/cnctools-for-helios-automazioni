@@ -167,11 +167,9 @@ void ToolEnqueue::enqueueFiles()
         }
 
         // Show an alert if different_speed is true
-        /*
         if (different_speeds) {
             QMessageBox::warning(this, "Cnc Tools", tr("different_speeds") + ": " + QString::number(speed)+" mm/min", QMessageBox::Ok);
         }
-        */
     }
 }
 
