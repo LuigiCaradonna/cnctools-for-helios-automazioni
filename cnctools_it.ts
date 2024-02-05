@@ -359,7 +359,7 @@
         <location filename="ToolEnqueue.cpp" line="116"/>
         <location filename="ToolEnqueue.cpp" line="190"/>
         <source>different_speeds</source>
-        <translation>I file selezionati hanno velocità di lavorazione differenti.\nAccoda come lavorazioni multiple con velocità diverse, oppure come lavorazione singola usando la velocità del primo file</translation>
+        <translation>I file selezionati hanno velocità di lavorazione differenti. Accoda come lavorazioni multiple con velocità diverse, oppure come lavorazione singola usando la velocità del primo file</translation>
     </message>
     <message>
         <location filename="ToolEnqueue.cpp" line="111"/>

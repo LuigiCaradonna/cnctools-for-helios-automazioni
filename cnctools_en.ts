@@ -359,7 +359,7 @@
         <location filename="ToolEnqueue.cpp" line="116"/>
         <location filename="ToolEnqueue.cpp" line="190"/>
         <source>different_speeds</source>
-        <translation>The selected files have different production speeds.\nEnqueue as multiple jobs.with different speeds or as a single job using the first file&apos;s speed</translation>
+        <translation>The selected files have different production speeds. Enqueue as multiple jobs.with different speeds or as a single job using the first file&apos;s speed</translation>
     </message>
     <message>
         <location filename="ToolEnqueue.cpp" line="111"/>
