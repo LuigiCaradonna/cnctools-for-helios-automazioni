@@ -79,13 +79,11 @@ void ToolEnqueue::enqueueFiles()
 {
     int files_to_enqueue = this->ui.enqueuedFiles->count();
     int speed = 0;
-    bool different_speeds = false;
+    bool enqueue_single = true;
 
     // If the data are correct
     if (this->checkData())
     {
-        QStringList file_content;
-
         this->destination = this->saveDestination();
 
         /*
@@ -96,19 +94,50 @@ void ToolEnqueue::enqueueFiles()
         */
         if (!this->destination.isEmpty())
         {
-            QFile file(this->destination);
+            QStringList file_content;
 
-            if (!file.open(QIODevice::WriteOnly | QIODevice::Text))
+            QFile output_file(this->destination);
+
+            if (!output_file.open(QIODevice::WriteOnly | QIODevice::Text))
             {
                 QMessageBox error_dialog;
                 error_dialog.critical(0, tr("error"), tr("cant_open_save_file"));
                 return;
             }
 
-            QTextStream stream(&file);
+            if (this->checkDifferentSpeeds() == 1)
+            {
+                QMessageBox message;
+                QPushButton* multiple_btn = message.addButton(tr("multiple"), QMessageBox::ActionRole);
+                QPushButton* single_btn = message.addButton(tr("single"), QMessageBox::ActionRole);
+                QPushButton* cancel_btn = message.addButton(tr("cancel"), QMessageBox::ActionRole);
+                message.setWindowTitle("Cnc Tools");
+                message.setIcon(QMessageBox::Warning);
+                message.setText(tr("different_speeds"));
+                message.exec();
+
+                if (message.clickedButton() == (QAbstractButton*)multiple_btn) {
+                    enqueue_single = 0;
+                }
+                else if (message.clickedButton() == (QAbstractButton*)single_btn) {
+                    enqueue_single = 1;
+                }
+                else {
+                    return;
+                }
+            }
+
+            QTextStream stream(&output_file);
 
             // Get the item at position 0 and use it to start the output file
             file_content = Helpers::getFileContentAsVector(this->ui.enqueuedFiles->item(0)->text());
+
+            if (file_content.isEmpty())
+            {
+                QMessageBox error_dialog;
+                error_dialog.critical(0, tr("error"), tr("cant_open_source_file"));
+                return;
+            }
 
             // Write the whole content of the first file into the destination file
             foreach(QString line, file_content)
@@ -128,47 +157,45 @@ void ToolEnqueue::enqueueFiles()
             */
             int unsigned line_count = 0;
 
-            // Loop over all the items except the first (start from i=1)
+            // Loop over all the items except the first which has been already processed (start from i=1)
             for (int unsigned i = 1; i < files_to_enqueue; ++i)
             {
                 file_content = Helpers::getFileContentAsVector(this->ui.enqueuedFiles->item(i)->text());
 
-                // Add the content of the source file into the destination file
-                foreach(QString line, file_content)
+                if (enqueue_single)
                 {
-                    // Get the speed set for the job
-
-                    if (line.indexOf("G73 X") == 0) {
-                        QStringList subline = line.split(" ");
-
-                        // Compare with the speed for the first job and if this is different
-                        if (subline[1].mid(1).toInt() != speed) {
-                            // Set the flag variable as true
-                            different_speeds = true;
+                    // Merge the different jobs as one
+                    
+                    // Add the content of the source file into the destination file
+                    foreach(QString line, file_content)
+                    {
+                        // Copy only the lines from the 7th ahead for single job
+                        if (line_count >= 6)
+                        {
+                            stream << line + "\n";
                         }
+
+                        line_count += 1;
                     }
 
-                    // Copy only the lines from the 7th ahead
-                    if (line_count >= 6)
+                    // Reset the counter
+                    line_count = 0;
+                }
+                else
+                {
+                    // Merge the different jobs as multiple jobs
+                    
+                    // Add the content of the source file into the destination file
+                    foreach(QString line, file_content)
                     {
                         stream << line + "\n";
                     }
-
-                    line_count += 1;
                 }
-
-                // Reset the counter
-                line_count = 0;
             }
 
             this->ui.logArea->setPlainText(tr("enqueue_success"));
 
-            file.close();
-        }
-
-        // Show an alert if different_speed is true
-        if (different_speeds) {
-            QMessageBox::warning(this, "Cnc Tools", tr("different_speeds") + ": " + QString::number(speed)+" mm/min", QMessageBox::Ok);
+            output_file.close();
         }
     }
 }
@@ -262,4 +289,66 @@ bool ToolEnqueue::checkData()
 void ToolEnqueue::closeWindow()
 {
     this->close();
+}
+
+int ToolEnqueue::checkDifferentSpeeds()
+{
+    int different_speeds = 0;
+    // Number of files to enqueue
+    int files_to_enqueue = this->ui.enqueuedFiles->count();
+    // Reference speed value
+    int speed = 0;
+
+    for (int unsigned i = 0; i < files_to_enqueue; ++i)
+    {
+        QFile file(this->ui.enqueuedFiles->item(i)->text());
+        // Verify that the file exists and has the proper format
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text))
+        {
+            QMessageBox error_dialog;
+            error_dialog.critical(0, tr("error"), tr("cant_open_source_file"));
+            return -1;
+        }
+
+        QTextStream in(&file);
+        int line_number = 0;
+        QString line_text = "";
+
+        while (!in.atEnd())
+        {
+            line_text = in.readLine();
+
+            if (line_number == 1)
+            {
+                if (line_text.indexOf("G73 X") == 0)
+                {
+                    QStringList subline = line_text.split(" ");
+
+                    // If this is the first file to enque
+                    if (i == 0)
+                    {
+                        // Just assign its speed to the variable used as reference
+                        speed = subline[1].mid(1).toInt();
+                    }
+                    else
+                    {
+                        // Compare with the speed for the first job and if this is different
+                        if (subline[1].mid(1).toInt() != speed) {
+                            // As one difference is found, the function can return
+                            return 1;
+                        }
+                    }
+                }
+
+                // No need to go further through the file
+                break;
+            }
+
+            line_number++;
+        }
+
+        file.close();
+    }
+
+    return different_speeds;
 }

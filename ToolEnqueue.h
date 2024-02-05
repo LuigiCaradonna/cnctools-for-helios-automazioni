@@ -92,7 +92,7 @@ private:
 	 * Validates the data, checking that at least one file is selected and that all the selected files
 	 * have valid extension and content.
 	 *
-	 * @return True if the inserted data are correct, false otherwise.
+	 * @return bool True if the inserted data are correct, false otherwise.
 	 */
 	bool checkData();
 
@@ -102,4 +102,12 @@ private:
 	 * @return void
 	 */
 	void closeWindow();
+
+	/*
+	 * Validates the data, checking that at least one file is selected and that all the selected files
+	 * have valid extension and content.
+	 *
+	 * @return int 0 if into the files to enqueue are set the same speed, 1 if the speeds are different, -1 on error.
+	 */
+	int checkDifferentSpeeds();
 };

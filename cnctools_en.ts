@@ -334,6 +334,8 @@
     </message>
     <message>
         <location filename="ToolEnqueue.cpp" line="104"/>
+        <location filename="ToolEnqueue.cpp" line="128"/>
+        <location filename="ToolEnqueue.cpp" line="301"/>
         <source>error</source>
         <translation>Error</translation>
     </message>
@@ -343,37 +345,59 @@
         <translation>It is not possible to open the destination file</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="163"/>
+        <location filename="ToolEnqueue.cpp" line="128"/>
+        <location filename="ToolEnqueue.cpp" line="301"/>
+        <source>cant_open_source_file</source>
+        <translation>Couldn&apos;t open one or more files</translation>
+    </message>
+    <message>
+        <location filename="ToolEnqueue.cpp" line="183"/>
         <source>enqueue_success</source>
         <translation>Enqueue successful</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="170"/>
+        <location filename="ToolEnqueue.cpp" line="116"/>
+        <location filename="ToolEnqueue.cpp" line="190"/>
         <source>different_speeds</source>
-        <translation>The selected jobs have different execution speeds. All the jobs will be executed at</translation>
+        <translation>The selected files have different production speeds.\nEnqueue as multiple jobs.with different speeds or as a single job using the first file&apos;s speed</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="202"/>
+        <location filename="ToolEnqueue.cpp" line="111"/>
+        <source>multiple</source>
+        <translation>Multiple</translation>
+    </message>
+    <message>
+        <location filename="ToolEnqueue.cpp" line="112"/>
+        <source>single</source>
+        <translation>Single</translation>
+    </message>
+    <message>
+        <location filename="ToolEnqueue.cpp" line="113"/>
+        <source>cancel</source>
+        <translation>Cancel</translation>
+    </message>
+    <message>
+        <location filename="ToolEnqueue.cpp" line="222"/>
         <source>save_to</source>
         <translation>Save to</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="216"/>
+        <location filename="ToolEnqueue.cpp" line="236"/>
         <source>no_file_selected</source>
         <translation>No file selected</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="231"/>
+        <location filename="ToolEnqueue.cpp" line="251"/>
         <source>file_not_found</source>
         <translation>File not found</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="239"/>
+        <location filename="ToolEnqueue.cpp" line="259"/>
         <source>wrong_extension</source>
         <translation>File estension is not correct</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="247"/>
+        <location filename="ToolEnqueue.cpp" line="267"/>
         <source>sel_valid_iso</source>
         <translation>Select valid ISO files</translation>
     </message>
@@ -386,65 +410,65 @@
         <translation>Enqueue ISO files</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="192"/>
+        <location filename="ToolEnqueue.ui" line="208"/>
         <source>btn_bottom_start_enqueue</source>
         <translation>Start</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="205"/>
+        <location filename="ToolEnqueue.ui" line="221"/>
         <source>btn_reset</source>
         <translation>Reset</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="218"/>
+        <location filename="ToolEnqueue.ui" line="234"/>
         <source>btn_close</source>
         <translation>Close</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="243"/>
+        <location filename="ToolEnqueue.ui" line="259"/>
         <source>btn_add_files</source>
         <translation>Add</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="246"/>
+        <location filename="ToolEnqueue.ui" line="262"/>
         <source>icon_add_files</source>
         <translation>Add</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="59"/>
-        <location filename="ToolEnqueue.ui" line="249"/>
+        <location filename="ToolEnqueue.ui" line="75"/>
+        <location filename="ToolEnqueue.ui" line="265"/>
         <source>tt_add_files</source>
         <translation>Add files</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="258"/>
+        <location filename="ToolEnqueue.ui" line="274"/>
         <source>btn_remove_files</source>
         <translation>Remove</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="261"/>
+        <location filename="ToolEnqueue.ui" line="277"/>
         <source>icon_remove_files</source>
         <translation>Remove</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="91"/>
-        <location filename="ToolEnqueue.ui" line="264"/>
+        <location filename="ToolEnqueue.ui" line="107"/>
+        <location filename="ToolEnqueue.ui" line="280"/>
         <source>tt_remove_sel_files</source>
         <translation>Remove selected files</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="273"/>
+        <location filename="ToolEnqueue.ui" line="289"/>
         <source>btn_enqueue</source>
         <translation>Enqueue</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="276"/>
+        <location filename="ToolEnqueue.ui" line="292"/>
         <source>icon_enqueue</source>
         <translation>Enqueue</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.ui" line="123"/>
-        <location filename="ToolEnqueue.ui" line="279"/>
+        <location filename="ToolEnqueue.ui" line="139"/>
+        <location filename="ToolEnqueue.ui" line="295"/>
         <source>tt_enqueue_files</source>
         <translation>Enqueue files</translation>
     </message>
@@ -515,43 +539,43 @@
         <translation>Translate coordinates</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.ui" line="53"/>
+        <location filename="ToolTranslation.ui" line="57"/>
         <source>lbl_source</source>
         <translation>Source</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.ui" line="110"/>
-        <location filename="ToolTranslation.ui" line="187"/>
+        <location filename="ToolTranslation.ui" line="114"/>
+        <location filename="ToolTranslation.ui" line="191"/>
         <source>btn_open</source>
         <translation>Open</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.ui" line="136"/>
+        <location filename="ToolTranslation.ui" line="140"/>
         <source>lbl_destination</source>
         <translation>Destination</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.ui" line="218"/>
+        <location filename="ToolTranslation.ui" line="222"/>
         <source>lbl_translation_x</source>
         <translation>Translation X</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.ui" line="245"/>
+        <location filename="ToolTranslation.ui" line="249"/>
         <source>lbl_translation_y</source>
         <translation>Translation Y</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.ui" line="328"/>
+        <location filename="ToolTranslation.ui" line="332"/>
         <source>lbl_log</source>
         <translation>Log</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.ui" line="384"/>
+        <location filename="ToolTranslation.ui" line="388"/>
         <source>btn_translate</source>
         <translation>Translate</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.ui" line="406"/>
+        <location filename="ToolTranslation.ui" line="410"/>
         <source>btn_close</source>
         <translation>Close</translation>
     </message>
