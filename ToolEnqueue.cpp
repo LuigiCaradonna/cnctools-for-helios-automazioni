@@ -311,40 +311,31 @@ int ToolEnqueue::checkDifferentSpeeds()
         }
 
         QTextStream in(&file);
-        int line_number = 0;
         QString line_text = "";
 
         while (!in.atEnd())
         {
             line_text = in.readLine();
 
-            if (line_number == 1)
+            if (line_text.indexOf("G73 X") == 0)
             {
-                if (line_text.indexOf("G73 X") == 0)
-                {
-                    QStringList subline = line_text.split(" ");
+                QStringList subline = line_text.split(" ");
 
-                    // If this is the first file to enque
-                    if (i == 0)
-                    {
-                        // Just assign its speed to the variable used as reference
-                        speed = subline[1].mid(1).toInt();
-                    }
-                    else
-                    {
-                        // Compare with the speed for the first job and if this is different
-                        if (subline[1].mid(1).toInt() != speed) {
-                            // As one difference is found, the function can return
-                            return 1;
-                        }
+                // If this is the first file to enque
+                if (i == 0)
+                {
+                    // Just assign its speed to the variable used as reference
+                    speed = subline[1].mid(1).toInt();
+                }
+                else
+                {
+                    // Compare with the speed for the first job and if this is different
+                    if (subline[1].mid(1).toInt() != speed) {
+                        // As one difference is found, the function can return
+                        return 1;
                     }
                 }
-
-                // No need to go further through the file
-                break;
             }
-
-            line_number++;
         }
 
         file.close();
