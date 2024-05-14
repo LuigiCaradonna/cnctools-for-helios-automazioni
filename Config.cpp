@@ -43,11 +43,25 @@ bool Config::checkConfigFile()
         // "fit" can only have values equal to 1 or 0
         if (fit != "0" && fit != "1")
         {
+            //********************* DEBUG *****************************
+            QMessageBox message;
+            message.setWindowTitle("CncTools");
+            message.setIcon(QMessageBox::Information);
+            message.setText("Config.cpp - Fit non valido");
+            message.exec();
+
             return false;
         }
     }
     catch (const std::exception& e)
     {
+        //********************* DEBUG *****************************
+        QMessageBox message;
+        message.setWindowTitle("CncTools");
+        message.setIcon(QMessageBox::Information);
+        message.setText("Config.cpp - Fit non presente");
+        message.exec();
+
         // "fit" key is not present
         return false;
     }
@@ -59,11 +73,25 @@ bool Config::checkConfigFile()
         // "autoresize" can only have values equal to 1 or 0
         if (autoresize != "0" && autoresize != "1")
         {
+            //********************* DEBUG *****************************
+            QMessageBox message;
+            message.setWindowTitle("CncTools");
+            message.setIcon(QMessageBox::Information);
+            message.setText("Config.cpp - Autoresize non valido");
+            message.exec();
+
             return false;
         }
     }
     catch (const std::exception& e)
     {
+        //********************* DEBUG *****************************
+        QMessageBox message;
+        message.setWindowTitle("CncTools");
+        message.setIcon(QMessageBox::Information);
+        message.setText("Config.cpp - Autoresize non presente");
+        message.exec();
+
         // "autoresize" key is not present
         return false;
     }
@@ -75,11 +103,25 @@ bool Config::checkConfigFile()
         // "color" can only have values equal to 1 or 0
         if (color != "0" && color != "1")
         {
+            //********************* DEBUG *****************************
+            QMessageBox message;
+            message.setWindowTitle("CncTools");
+            message.setIcon(QMessageBox::Information);
+            message.setText("Config.cpp - Color non valido");
+            message.exec();
+
             return false;
         }
     }
     catch (const std::exception& e)
     {
+        //********************* DEBUG *****************************
+        QMessageBox message;
+        message.setWindowTitle("CncTools");
+        message.setIcon(QMessageBox::Information);
+        message.setText("Config.cpp - Color non presente");
+        message.exec();
+
         // "color" key is not present
         return false;
     }
@@ -91,11 +133,25 @@ bool Config::checkConfigFile()
         // "gradient" can only have values equal to 1 or 0
         if (gradient != "0" && gradient != "1")
         {
+            //********************* DEBUG *****************************
+            QMessageBox message;
+            message.setWindowTitle("CncTools");
+            message.setIcon(QMessageBox::Information);
+            message.setText("Config.cpp - Gradient non valido");
+            message.exec();
+
             return false;
         }
     }
     catch (const std::exception& e)
     {
+        //********************* DEBUG *****************************
+        QMessageBox message;
+        message.setWindowTitle("CncTools");
+        message.setIcon(QMessageBox::Information);
+        message.setText("Config.cpp - Gradient non presente");
+        message.exec();
+
         // "gradient" key is not present
         return false;
     }
@@ -107,11 +163,25 @@ bool Config::checkConfigFile()
         // "zmax" can only have values equal to 1 or 0
         if (zmax != "0" && zmax != "1")
         {
+            //********************* DEBUG *****************************
+            QMessageBox message;
+            message.setWindowTitle("CncTools");
+            message.setIcon(QMessageBox::Information);
+            message.setText("Config.cpp - Zmax non valido");
+            message.exec();
+
             return false;
         }
     }
     catch (const std::exception& e)
     {
+        //********************* DEBUG *****************************
+        QMessageBox message;
+        message.setWindowTitle("CncTools");
+        message.setIcon(QMessageBox::Information);
+        message.setText("Config.cpp - Zmax non presente");
+        message.exec();
+
         // "zmax" key is not present
         return false;
     }
@@ -123,11 +193,25 @@ bool Config::checkConfigFile()
         // "folder" must contain a path and it must be valid
         if (folder == "" || !Helpers::fileExists(folder))
         {
+            //********************* DEBUG *****************************
+            QMessageBox message;
+            message.setWindowTitle("CncTools");
+            message.setIcon(QMessageBox::Information);
+            message.setText("Config.cpp - Folder non valido");
+            message.exec();
+
             return false;
         }
     }
     catch (const std::exception& e)
     {
+        //********************* DEBUG *****************************
+        QMessageBox message;
+        message.setWindowTitle("CncTools");
+        message.setIcon(QMessageBox::Information);
+        message.setText("Config.cpp - Folder non presente");
+        message.exec();
+
         // "folder" key is not present or it is not valid
         return false;
     }
@@ -139,11 +223,25 @@ bool Config::checkConfigFile()
         // "lang" must contain the code of one of the existing language translations
         if (lang != "it" && lang != "en")
         {
+            //********************* DEBUG *****************************
+            QMessageBox message;
+            message.setWindowTitle("CncTools");
+            message.setIcon(QMessageBox::Information);
+            message.setText("Config.cpp - Lang non valido");
+            message.exec();
+
             return false;
         }
     }
     catch (const std::exception& e)
     {
+        //********************* DEBUG *****************************
+        QMessageBox message;
+        message.setWindowTitle("CncTools");
+        message.setIcon(QMessageBox::Information);
+        message.setText("Config.cpp - Lang non presente");
+        message.exec();
+
         // "lang" key is not present or it is not valid
         return false;
     }

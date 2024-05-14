@@ -187,6 +187,14 @@ void CncTools::initOptions()
         // Initialize a new config file with the default values
         this->config->initConfigFile(this->language.toStdString());
 
+        //*************************************************************
+        QMessageBox message;
+        message.setWindowTitle("CncTools");
+        message.setIcon(QMessageBox::Information);
+        message.setText("Richiesta reinizializzazione config da initOptions in cnctools.cpp");
+        message.exec();
+
+
         // Now a new valid config file exists, call again this function to load the updated file
         this->initOptions();
     }
@@ -261,6 +269,13 @@ void CncTools::updateOptions(const std::string& key, const std::string& value)
 
         // A new config file has been generated
         reload = true;
+
+        //*************************************************************
+        QMessageBox message;
+        message.setWindowTitle("CncTools");
+        message.setIcon(QMessageBox::Information);
+        message.setText("Richiesta reinizializzazione config da updateOptions in cnctools.cpp");
+        message.exec();
     }
 
     this->config->updateConfigFile(key, value);

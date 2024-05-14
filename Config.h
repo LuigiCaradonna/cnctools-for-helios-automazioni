@@ -3,6 +3,8 @@
 #include <string>
 #include <fstream>
 #include <iostream>
+#include <QFileDialog>
+#include <QMessageBox>
 #include "Helpers.h"
 #include "json.hpp"
 
