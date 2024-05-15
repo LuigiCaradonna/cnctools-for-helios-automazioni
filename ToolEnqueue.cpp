@@ -37,24 +37,27 @@ void ToolEnqueue::addFile()
     // Open the file browser to select the source file(s)
     this->iso_files = QFileDialog::getOpenFileNames(this, tr("open_file"), QString::fromUtf8(this->folder.c_str()), filter);
 
-    // Loop over all the selected files
-    foreach(QString file, this->iso_files)
+    if (!this->iso_files.isEmpty())
     {
-        QFileInfo fi(file);
-        file_folder = fi.absolutePath();
+        // Loop over all the selected files
+        foreach(QString file, this->iso_files)
+        {
+            QFileInfo fi(file);
+            file_folder = fi.absolutePath();
 
-        // Create a new list item
-        QListWidgetItem* item = new QListWidgetItem(file);
-        // Make it checkable
-        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
-        // Set it unchecked by default
-        item->setCheckState(Qt::Unchecked);
-        // Add the selected file to the list
-        this->ui.enqueuedFiles->addItem(item);
+            // Create a new list item
+            QListWidgetItem* item = new QListWidgetItem(file);
+            // Make it checkable
+            item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+            // Set it unchecked by default
+            item->setCheckState(Qt::Unchecked);
+            // Add the selected file to the list
+            this->ui.enqueuedFiles->addItem(item);
+        }
+
+        // Update the last opened folder
+        this->folder = file_folder.toStdString();
     }
-
-    // Update the last opened folder
-    this->folder = file_folder.toStdString();
 }
 
 void ToolEnqueue::removeFiles()
@@ -92,7 +95,7 @@ void ToolEnqueue::enqueueFiles()
             It would also be possible to use isNull(), but isEmpty() works both for null
             and empty strings, while isNull() checks only for null value.
         */
-        if (!this->destination.isEmpty())
+        if (!this->destination.isEmpty() && this->destination != "")
         {
             QStringList file_content;
 

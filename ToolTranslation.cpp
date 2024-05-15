@@ -32,14 +32,17 @@ void ToolTranslation::openSource()
     // Open the file browser to select the source file
     this->source = QFileDialog::getOpenFileName(this, tr("open_file"), QString::fromUtf8(this->folder.c_str()), filter);
 
-    // Update the last opened folder
-    this->folder = this->source.toStdString();
+    if (!this->source.isEmpty() && this->source != "")
+    {
+        // Update the last opened folder
+        this->folder = this->source.toStdString();
 
-    // Elides, if necessary, the string to fit the selected line edit filed and prints it
-    QString elided_text = Helpers::elideText(*this->ui.in_source, this->source);
-    
-    // Print the elided text into the label
-    this->ui.in_source->setText(elided_text);
+        // Elides, if necessary, the string to fit the selected line edit filed and prints it
+        QString elided_text = Helpers::elideText(*this->ui.in_source, this->source);
+
+        // Print the elided text into the label
+        this->ui.in_source->setText(elided_text);
+    }
 }
 
 void ToolTranslation::saveDestination()
@@ -56,7 +59,7 @@ void ToolTranslation::saveDestination()
         It would also be possible to use isNull(), but isEmpty() works both for null
         and empty strings, while isNull() checks only for null value.
     */
-    if (!this->destination.isEmpty())
+    if (!this->destination.isEmpty() && this->destination != "")
     {
         // Elides, if necessary, the string to fit the selected line edit filed and prints it
         QString elided_text = Helpers::elideText(*this->ui.in_destination, this->destination);
