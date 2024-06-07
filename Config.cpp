@@ -123,8 +123,8 @@ bool Config::checkConfigFile()
         // "folder" must contain a path and it must be valid
         if (folder == "" || !Helpers::fileExists(folder))
         {
-            // Set the default path
-            this->updateConfigFile("folder", this->default_archive_folder);
+            // Set the default folder
+            this->updateConfigFile("folder", this->default_folder);
             return true;
         }
     }
@@ -167,7 +167,7 @@ void Config::initConfigFile(const std::string& lang)
     j["color"] = "0";
     j["gradient"] = "0";
     j["zmax"] = "0";
-    j["folder"] = this->default_archive_folder;
+    j["folder"] = this->default_folder;
     j["lang"] = lang;
 
     // Write the JSON converted to string into the file

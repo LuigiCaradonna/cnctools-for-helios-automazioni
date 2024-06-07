@@ -61,7 +61,7 @@ public:
 private:
     // Name of the configuration file
     std::string config_file;
-    // Default archive folder
-    std::string default_archive_folder = "C:/helios1/archivio";
+    // Default working folder
+    std::string default_folder = "C:/helios1/archivio";
 };
 
