@@ -194,7 +194,6 @@ void CncTools::initOptions()
         message.setText("Richiesta reinizializzazione config da initOptions in cnctools.cpp");
         message.exec();
 
-
         // Now a new valid config file exists, call again this function to load the updated file
         this->initOptions();
     }
