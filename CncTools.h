@@ -341,11 +341,11 @@ private:
     // the last used folder.
     std::string folder;
 
-    // Setting the antialiasing for the canvas, active by default,
-    // the canvas area is extended by 4 pixels over the visible area, and the mouse position
+    // By setting the antialiasing for the canvas, active by default,
+    // the canvas area is extended by 4 pixels over the visible area (2px around), and the mouse position
     // is offset by 4px, this will compensate this difference.
     // Must be set to 0 if the antialiasing is not in use.
-    int canvas_expanded = 4;
+    int canvas_expanded = 2;
 
     // Last Z position, to be updated for each segment, this will be used to know
     // how much the tool must be raised to leave the working surface

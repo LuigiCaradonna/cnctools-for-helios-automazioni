@@ -75,7 +75,6 @@ QVector3D CoordManager::getClosestPoint(const QList<QVector3D>& coords, const fl
     float current_dist = 0.f;
     QVector3D point;
 
-    // TODO: write the logic to find the closest point to the given coordinates
     for (int i = 0; i < coords.length(); ++i)
     {
         if (coords[i][0] != this->UP && coords[i][0] != this->DOWN)

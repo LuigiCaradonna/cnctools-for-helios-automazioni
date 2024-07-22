@@ -1256,11 +1256,15 @@ void CncTools::moveMousePointerToClosestPoint(const float x, const float y)
 {
     QVector3D closest_point = coord_manager->getClosestPoint(this->coords, x, y);
 
+    qDebug() << "Scene h: " + QString::number(this->scene_h);
+    qDebug() << "Point Y: " + QString::number(closest_point[1]);
+    qDebug() << "Scale factor: " + QString::number(this->scale_factor);
+    qDebug() << "Punto calcolato: " + QString::number(this->scene_h - (closest_point[1] * (1 / this->scale_factor)));
+
     // Move the mouse pointer to the coordinates of colsest_point
-    // TODO: make the coordinates relative to the scene
     QPoint pos(
         (closest_point[0] * this->scale_factor) + this->canvas_expanded,
-        this->scene_h - (closest_point[1] * (1 / this->scale_factor))
+        this->scene_h - (closest_point[1] * this->scale_factor)
     );
     
     QPoint globalPos = this->ui.canvas->mapToGlobal(pos);
