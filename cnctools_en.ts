@@ -314,13 +314,13 @@
 <context>
     <name>CoordManager</name>
     <message>
-        <location filename="CoordManager.cpp" line="224"/>
+        <location filename="CoordManager.cpp" line="223"/>
         <source>extract_coords</source>
         <oldsource>Extracting coordinates</oldsource>
         <translation>Extracting coordinates</translation>
     </message>
     <message>
-        <location filename="CoordManager.cpp" line="224"/>
+        <location filename="CoordManager.cpp" line="223"/>
         <source>cancel</source>
         <translation>Cancel</translation>
     </message>
@@ -333,71 +333,70 @@
         <translation>Open Files</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="104"/>
-        <location filename="ToolEnqueue.cpp" line="128"/>
-        <location filename="ToolEnqueue.cpp" line="301"/>
+        <location filename="ToolEnqueue.cpp" line="107"/>
+        <location filename="ToolEnqueue.cpp" line="141"/>
+        <location filename="ToolEnqueue.cpp" line="312"/>
         <source>error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="104"/>
+        <location filename="ToolEnqueue.cpp" line="107"/>
         <source>cant_open_save_file</source>
         <translation>It is not possible to open the destination file</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="128"/>
-        <location filename="ToolEnqueue.cpp" line="301"/>
+        <location filename="ToolEnqueue.cpp" line="141"/>
+        <location filename="ToolEnqueue.cpp" line="312"/>
         <source>cant_open_source_file</source>
         <translation>Couldn&apos;t open one or more files</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="183"/>
+        <location filename="ToolEnqueue.cpp" line="199"/>
         <source>enqueue_success</source>
         <translation>Enqueue successful</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="116"/>
-        <location filename="ToolEnqueue.cpp" line="190"/>
+        <location filename="ToolEnqueue.cpp" line="119"/>
         <source>different_speeds</source>
         <translation>The selected files have different production speeds. Enqueue as multiple jobs.with different speeds or as a single job using the first file&apos;s speed</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="111"/>
+        <location filename="ToolEnqueue.cpp" line="114"/>
         <source>multiple</source>
         <translation>Multiple</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="112"/>
+        <location filename="ToolEnqueue.cpp" line="115"/>
         <source>single</source>
         <translation>Single</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="113"/>
+        <location filename="ToolEnqueue.cpp" line="116"/>
         <source>cancel</source>
         <translation>Cancel</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="222"/>
+        <location filename="ToolEnqueue.cpp" line="233"/>
         <source>save_to</source>
         <translation>Save to</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="236"/>
+        <location filename="ToolEnqueue.cpp" line="247"/>
         <source>no_file_selected</source>
         <translation>No file selected</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="251"/>
+        <location filename="ToolEnqueue.cpp" line="262"/>
         <source>file_not_found</source>
         <translation>File not found</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="259"/>
+        <location filename="ToolEnqueue.cpp" line="270"/>
         <source>wrong_extension</source>
         <translation>File estension is not correct</translation>
     </message>
     <message>
-        <location filename="ToolEnqueue.cpp" line="267"/>
+        <location filename="ToolEnqueue.cpp" line="278"/>
         <source>sel_valid_iso</source>
         <translation>Select valid ISO files</translation>
     </message>
@@ -476,57 +475,57 @@
 <context>
     <name>ToolTranslation</name>
     <message>
-        <location filename="ToolTranslation.cpp" line="33"/>
+        <location filename="ToolTranslation.cpp" line="34"/>
         <source>open_file</source>
         <translation>Open Files</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="51"/>
+        <location filename="ToolTranslation.cpp" line="55"/>
         <source>save_to</source>
         <translation>Save to</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="89"/>
+        <location filename="ToolTranslation.cpp" line="102"/>
         <source>file_not_found</source>
         <translation>File not found</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="96"/>
+        <location filename="ToolTranslation.cpp" line="109"/>
         <source>wrong_extension</source>
         <translation>File estension is not correct</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="103"/>
+        <location filename="ToolTranslation.cpp" line="116"/>
         <source>sel_valid_iso</source>
         <translation>Select valid ISO files</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="121"/>
+        <location filename="ToolTranslation.cpp" line="134"/>
         <source>save_file_empty</source>
         <translation>Destination file not specified</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="142"/>
+        <location filename="ToolTranslation.cpp" line="155"/>
         <source>provide_valid_x_trans</source>
         <translation>Provide a valid value for X translation</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="164"/>
+        <location filename="ToolTranslation.cpp" line="177"/>
         <source>provide_valid_y_trans</source>
         <translation>Provide a valid value for Y translation</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="214"/>
+        <location filename="ToolTranslation.cpp" line="227"/>
         <source>error</source>
         <translation>Error</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="214"/>
+        <location filename="ToolTranslation.cpp" line="227"/>
         <source>cant_open_save_file</source>
         <translation>It is not possible to open the destination file</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.cpp" line="316"/>
+        <location filename="ToolTranslation.cpp" line="329"/>
         <source>translation_success</source>
         <translation>Translation succeeded</translation>
     </message>
@@ -575,7 +574,12 @@
         <translation>Translate</translation>
     </message>
     <message>
-        <location filename="ToolTranslation.ui" line="410"/>
+        <location filename="ToolTranslation.ui" line="415"/>
+        <source>btn_reset</source>
+        <translation>Reset</translation>
+    </message>
+    <message>
+        <location filename="ToolTranslation.ui" line="437"/>
         <source>btn_close</source>
         <translation>Close</translation>
     </message>

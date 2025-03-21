@@ -43,6 +43,7 @@ CncTools::CncTools(QWidget* parent)
     this->ui.canvas->setScene(this->scene);
     // Set the canvas alignment
     this->ui.canvas->setAlignment(Qt::AlignTop | Qt::AlignLeft);
+    this->ui.canvas->setBackgroundBrush(Qt::white);
 
     /*
         Bind the menu entries to the corresponding method to fire
@@ -1278,7 +1279,7 @@ void CncTools::createLanguageMenu()
 
     connect(langGroup, SIGNAL(triggered(QAction*)), this, SLOT(slotLanguageChanged(QAction*)));
 
-    /// Passing as parameter the full path to the folder containing the language files.
+    // Passing as parameter the full path to the folder containing the language files.
     QDir dir(this->m_langFullPath);
 
     // List of the language files

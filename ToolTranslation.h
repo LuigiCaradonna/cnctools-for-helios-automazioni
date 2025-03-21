@@ -70,6 +70,13 @@ private:
 	void resetErrors();
 
 	/*
+	 * Resets the form.
+	 *
+	 * @return void
+	 */
+	void resetForm();
+
+	/*
 	 * Validates the data.
 	 *
 	 * @return True if the inserted data are correct, false otherwise.

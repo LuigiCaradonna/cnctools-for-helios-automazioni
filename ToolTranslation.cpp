@@ -13,7 +13,8 @@ ToolTranslation::ToolTranslation(std::string f, QWidget *parent)
 	// Bind the buttons to the corresponding method to fire
 	this->connect(this->ui.btn_source, &QPushButton::released, this, &ToolTranslation::openSource);
 	this->connect(this->ui.btn_destination, &QPushButton::released, this, &ToolTranslation::saveDestination);
-	this->connect(this->ui.btn_translate, &QPushButton::released, this, &ToolTranslation::translate);
+    this->connect(this->ui.btn_translate, &QPushButton::released, this, &ToolTranslation::translate);
+    this->connect(this->ui.btn_reset, &QPushButton::released, this, &ToolTranslation::resetForm);
 	this->connect(this->ui.btn_close, &QPushButton::released, this, &ToolTranslation::closeWindow);
 }
 
@@ -76,6 +77,15 @@ void ToolTranslation::resetErrors()
 	this->ui.in_traslation_x->setStyleSheet("border: 1px solid black");
 	this->ui.in_traslation_y->setStyleSheet("border: 1px solid black");
 	this->ui.out_log->setPlainText("");
+}
+
+void ToolTranslation::resetForm()
+{
+    this->ui.in_source->setText("");
+    this->ui.in_destination->setText("");
+    this->ui.in_traslation_x->setText("");
+    this->ui.in_traslation_y->setText("");
+    this->ui.out_log->setPlainText("");
 }
 
 bool ToolTranslation::checkData()

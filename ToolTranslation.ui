@@ -350,7 +350,7 @@
         <string notr="true"/>
        </property>
        <property name="horizontalScrollBarPolicy">
-        <enum>Qt::ScrollBarAsNeeded</enum>
+        <enum>Qt::ScrollBarPolicy::ScrollBarAsNeeded</enum>
        </property>
        <property name="undoRedoEnabled">
         <bool>false</bool>
@@ -386,6 +386,33 @@
          </property>
          <property name="text">
           <string>btn_translate</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btn_reset">
+         <property name="minimumSize">
+          <size>
+           <width>0</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>23</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="toolTip">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>btn_reset</string>
          </property>
         </widget>
        </item>
