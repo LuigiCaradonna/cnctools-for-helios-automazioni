@@ -4,53 +4,53 @@
 <context>
     <name>CncTools</name>
     <message>
-        <location filename="CncTools.cpp" line="457"/>
+        <location filename="CncTools.cpp" line="458"/>
         <source>open_file</source>
         <translation>Open Files</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="506"/>
+        <location filename="CncTools.cpp" line="507"/>
         <source>wrong_extension</source>
         <translation>File estension is not correct</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="520"/>
+        <location filename="CncTools.cpp" line="521"/>
         <source>sel_valid_iso</source>
         <translation>Select valid ISO files</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="542"/>
+        <location filename="CncTools.cpp" line="543"/>
         <source>prov_valid_width</source>
         <translation>Provide a valid width (integer number equals or greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="568"/>
+        <location filename="CncTools.cpp" line="569"/>
         <source>prov_valid_height</source>
         <translation>Provide a valid height (integer number equals or greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="594"/>
+        <location filename="CncTools.cpp" line="595"/>
         <source>prov_valid_speed</source>
         <translation>Provide a valid speed (integer greater than zero)</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="609"/>
-        <location filename="CncTools.cpp" line="618"/>
+        <location filename="CncTools.cpp" line="610"/>
+        <location filename="CncTools.cpp" line="619"/>
         <source>set_dims_none</source>
         <translation>Set both the dimensions or none</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="898"/>
+        <location filename="CncTools.cpp" line="899"/>
         <source>no</source>
         <translation>No</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="912"/>
+        <location filename="CncTools.cpp" line="913"/>
         <source>proc_coords</source>
         <translation>Processing coordinates</translation>
     </message>
     <message>
-        <location filename="CncTools.cpp" line="913"/>
+        <location filename="CncTools.cpp" line="914"/>
         <source>cancel</source>
         <translation>Cancel</translation>
     </message>
@@ -411,7 +411,7 @@
     <message>
         <location filename="ToolEnqueue.ui" line="208"/>
         <source>btn_bottom_start_enqueue</source>
-        <translation>Start</translation>
+        <translation>Enqueue</translation>
     </message>
     <message>
         <location filename="ToolEnqueue.ui" line="221"/>
