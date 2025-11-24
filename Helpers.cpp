@@ -165,7 +165,9 @@ QStringList Helpers::getFilesContentAsVector(QStringList filenames)
     {
         QFile file(f);
         // Verify that the file exists and has the proper format
-        file.open(QIODevice::ReadOnly | QIODevice::Text);
+        if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+            return iso;
+        }
 
         QTextStream in(&file);
         while (!in.atEnd())
